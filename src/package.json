@@ -1,0 +1,21 @@
+{
+  "name": "Expo70_Commemorative_Park",
+  "version": "1",
+  "description": "Expo70 Commemorative Park",
+  "author": "yokota kenji",
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-este-watch": "~0.1.15",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-exec": "~0.4.3",
+    "underscore": "~1.5.2",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-styleguide": "~0.2.15"
+  }
+}

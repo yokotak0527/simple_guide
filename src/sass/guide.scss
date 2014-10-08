@@ -1,0 +1,205 @@
+@import "def_reset";
+@import "helper_extends";
+@import "helper_mixins";
+@import "compass_helper_mixins";
+@import "compass_sprite_mixins";
+@import "compass";
+
+@import "modules/variables";
+
+// =============================================================================
+// default
+// =============================================================================
+
+body{
+	width      : 100%;
+	min-height : 100%;
+	color      : $text-color;
+	position   : relative;
+	background : $body-bg;
+}
+a{
+	color : $link-color;
+}
+
+// =============================================================================
+// layout
+// =============================================================================
+
+body{
+	position : relative;
+	@extend %clearfix;
+}
+
+body > nav{
+	position   : absolute;
+	width      : $nav-width;
+	min-height : 100%;
+	background : $nav-bg;
+	padding    : 30px 15px;
+	z-index    : 500;
+	@include box-sizing(border-box);
+	@include box-shadow(rgba(0, 0, 0, 0.2) -50px 0px 5px -46px inset);
+	h1{
+		width          : 100%;
+		font-size      : 22px;
+		color          : $nav-title-color;
+		text-align     : center;
+		padding-bottom : 15px;
+		border-bottom  : 1px solid #CCC;
+	}
+	h2{
+		width          : 100%;
+		font-size      : 16px;
+		color          : $nav-sub-title-color;
+		padding-top    : 30px;
+		padding-bottom : 15px;
+		border-bottom  : 1px solid #CCC;
+	}
+	ul{
+		border-top  : 1px solid darken($nav-size-shadow,30%);
+		padding-top : 10px;
+	}
+	ul li a{
+		display         : block;
+		text-decoration : none;
+		color           : $nav-color;
+		padding         : 5px 0;
+		&:before{ content : "・"; }
+		&:hover:before{ content : "→"; }
+	}
+}
+
+body > article{
+	position     : relative;
+	width        : 100%;
+	padding      : 30px;
+	padding-left : $nav-width + 30;
+	@include box-sizing(border-box);
+}
+
+.styleguide-style{
+	h1{
+		display        : block;
+		font-size      : 38px;
+		padding-top    : 0.6em;
+		padding-bottom : 0.5em;
+	}
+	h2{
+		display        : block;
+		font-size      : 26px;
+		padding-bottom : 0.25em;
+		padding-top    : 0.8em;
+	}
+	h1 + h2,
+	h2 + h2{
+		padding-top : 0;
+	}
+	h3{
+		font-weight    : bold;
+		font-size      : 18px;
+		padding-bottom : 0.2em;
+		padding-top    : 1.2em;
+	}
+	p{
+		line-height : 1.7;
+	}
+	em{
+		color      : $em-color;
+		font-style : normal;
+	}
+	hr{
+		display       : block;
+		height        : 1px;
+		border        : none;
+		border-bottom : 1px solid lighten($hr-color,40%);
+		padding       : 0 0;
+		margin        : 0.3em 0 0.5em 0;
+	}
+	table{
+		margin : 0.35em 0 0.7em 0;
+		th,td{
+			padding     : 0.5em 0.7em 0.4em 0.7em;
+			text-align  : left;
+			border      : 1px solid $table-border;
+			line-height : 1.7;
+		}
+		thead{
+			th{
+				background : $table-thead-th-bg;
+				color      : $table-thead-th-color;
+			}
+			td{
+				background : $table-thead-td-bg;
+				color      : $table-thead-td-color;
+			}
+		}
+		tbody{
+			th{
+				background : $table-tbody-th-bg;
+				color      : $table-tbody-th-color;
+			}
+			td{
+				background : $table-tbody-td-bg;
+				color      : $table-tbody-td-color;
+			}
+		}
+	}
+	table + table{margin-top : 0.9em;}
+	dl{
+		@extend %clearfix;
+		dt{
+			float       : left;
+			clear       : both;
+			line-height : 1.7;
+		}
+		dd{
+			line-height  : 1.7;
+			padding-left : 1.8em;
+		}
+	}
+
+}
+.styleguide-style:first-child{
+	h1{padding-top : 0;}
+}
+
+.preview{
+	margin     : 0.4em 0;
+	background : #FFF;
+	padding    : 15px;
+	// background : image-url('ps-bg.jpg') repeat;
+	border     : 1px solid lighten($drower-bg-color,40%);
+	overflow   : hidden;
+	> div{
+		background : $base-bg-color;
+	}
+	@include box-sizing(box-sizing);
+}
+
+.code{
+	margin      : 0.4em 0;
+	background  : $drower-bg-color;
+	color       : #FFF;
+	line-height : 1.6;
+	padding     : 15px;
+	width       : 100%;
+	overflow    : hidden;
+	overflow-x  : scroll;
+	@include box-sizing(border-box);
+}
+
+// =============================================================================
+// モジュールインポート
+// =============================================================================
+//@import "modules/section-header";
+//@import "modules/slider";
+//@import "modules/list";
+//@import "modules/banner";
+
+//@import "../../../ranking/src/css/ranking-contents.css";
+//@import "../../../news/src/css/news-contents.css";
+//@import "../../../premama/src/css/premama-contents.css";
+//@import "../../../campaign/src/css/campaign-contents.css";
+
+

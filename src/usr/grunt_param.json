@@ -1,0 +1,11 @@
+{
+	"param" : {
+		"host" : "192.168.1.5",
+		"sass" : {
+			"importPath" : [
+				"/Users/kibayashishouko/Dropbox/share/withprojects/lib/compass/",
+				"/Users/kibayashishouko/Dropbox/share/withprojects/lib/sass/"
+			]
+		}
+	}
+}
