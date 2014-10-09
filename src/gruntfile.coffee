@@ -6,9 +6,7 @@ module.exports = (grunt) ->
 	# 共通項目
 	# ==========================================================================
 	grunt.pkg         = grunt.file.readJSON 'package.json'
-	grunt.user        = grunt.file.readJSON 'usr/grunt_param.json'
 	grunt.glabalParam = gc = 
-		host        : 'xxx.xxx.x.x.x'
 		projectPath : './'
 		httpPath    : '/'
 		srcDir      : 'src/'
@@ -42,14 +40,6 @@ module.exports = (grunt) ->
 	# ['*','**/*','**/**/*']に増やす
 	for val in _watchDir
 		for path in ['*','**/*','**/**/*'] then gc.watchDirs.push val[1] + path + val[0]
-
-	# パラメーターをユーザー設定に上書き
-	for key,val of grunt.user.param
-		if typeof val == 'object'
-			for _key,_val of val
-				grunt.glabalParam[key][_key] = _val
-		else
-			grunt.glabalParam[key] = val
 
 	# //////////////////////////////////////////////////////////////////////////
 	# 拡張機能
@@ -108,10 +98,4 @@ module.exports = (grunt) ->
 		grunt.task.run('coffee:prod')
 		grunt.task.run('uglify:js')
 
-	# //////////////////////////////////////////////////////////////////////////
-	# ユーザーごとの設定読み込み
-	# //////////////////////////////////////////////////////////////////////////
-	_este_watch = require './usr/grunt_task.coffee'
-	_este_watch.extendGrantTask grunt
-
-
+	return

@@ -1,21 +1,20 @@
 {
-  "name": "Expo70_Commemorative_Park",
-  "version": "1",
-  "description": "Expo70 Commemorative Park",
+  "name": "SIMPLE_GUIDE",
+  "version": "0.1.0",
+  "description": "SIMPLEGUIDE",
   "author": "yokota kenji",
   "repository": {
     "type": "git",
     "url": ".git"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.5",
     "grunt-este-watch": "~0.1.15",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-uglify": "~0.3.3",
     "grunt-contrib-compass": "~0.7.2",
-    "grunt-exec": "~0.4.3",
+    "grunt-exec": "~0.4.6",
     "underscore": "~1.5.2",
-    "grunt-contrib-coffee": "~0.10.0",
-    "grunt-styleguide": "~0.2.15"
+    "grunt-contrib-coffee": "~0.10.1"
   }
 }
