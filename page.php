@@ -1,13 +1,12 @@
 <?php
-	include('assets/config.php');
-	// -------------------------------------------------------------------------
 	// page setting
-	// -------------------------------------------------------------------------
-	$page_title = 'page';
-	// -------------------------------------------------------------------------
-	include('assets/header.php');
+	$rootPath   = './';
 ?>
-<div class="styleguide-style">
+<?php
+	include($rootPath.'assets/config.php');
+	include($rootPath.'assets/header.php');
+?>
+<div class="guide-style">
 	<h1>SIMPLE GUIDE version 0.1</h1>
 	<p>
 		SIMPLE GUIDE is a simple tools of making guide.<br>
@@ -22,4 +21,4 @@
 		v.code
 	</pre>
 </div>
-<?php include('assets/footer.php'); ?>
+<?php include($rootPath.'assets/footer.php'); ?>
