@@ -10,12 +10,28 @@ Operating environment
 
 Without customization, can only be used to prepare the following environment, as is possible.
 
-|PHP|5.3~|
-|browser|chrome, safari, or firefox|
+<table>
+<tr>
+<th>PHP</th>
+<td>5.3~</td>
+</tr>
+<tr>
+<th>browser</th>
+<td>chrome, safari, or firefox</td>
+</tr>
+</table>
 
  The following environment is required if you want to customize.
 
-|Grunt|
-|Sass|
-|Compass|
-|CoffeeScript|
+
+<table>
+<tr>
+<td>Grunt</td>
+</tr><tr>
+<td>Sass</td>
+</tr><tr>
+<td>Compass</td>
+</tr><tr>
+<td>CoffeeScript</td>
+</tr>
+</table>
