@@ -1,5 +1,5 @@
 <nav>
-	<h1>SIMPLE<br>GUIDE</h1>
+	<h1><?php echo $guide_title_html; ?></h1>
 	<ul>
 		<li><a href="<?php echo $root_path; ?>index.php">top page</a></li>
 	</ul>

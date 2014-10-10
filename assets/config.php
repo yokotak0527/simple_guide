@@ -1,13 +1,15 @@
 <?php
-	$lang            = $lang            ? $lang            : 'en';
-	$charset         = $charset         ? $charset         : 'UTF-8';
-	$guide_title     = $guide_title     ? $guide_title     : 'SIMPLE GUIDE';
-	$page_title      = $page_title      ? $page_title      : false;
-	$add_header      = $add_header      ? $add_header      : '';
-	$add_footer      = $add_footer      ? $add_footer      : '';
-	$highlight_style = $highlight_style ? $highlight_style : 'tomorrow-night-bright';
-	$root_path       = $root_path       ? $root_path       : './';
-	$markdown        = $markdown        ? $markdown        : false;
+	$lang             = $lang             ? $lang             : 'en';
+	$charset          = $charset          ? $charset          : 'UTF-8';
+	$guide_title      = $guide_title      ? $guide_title      : 'SIMPLE GUIDE';
+	$guide_title_html = $guide_title_html ? $guide_title_html : 'SIMPLE<br>GUIDE';
+	$page_title       = $page_title       ? $page_title       : false;
+	$add_header       = $add_header       ? $add_header       : '';
+	$add_footer       = $add_footer       ? $add_footer       : '';
+	$highlight_style  = $highlight_style  ? $highlight_style  : 'tomorrow-night-bright';
+	$root_path        = $root_path        ? $root_path        : './';
+	$markdown         = $markdown         ? $markdown         : false;
+	$contents_line    = $contents_line    ? $contents_line    : 80;
 	// =========================================================================
 	// developer
 	// =========================================================================
@@ -18,4 +20,9 @@
 	set_include_path(get_include_path().PATH_SEPARATOR.$php_lib_path);
 	require_once 'php-markdown/Michelf/MarkdownInterface.php';
 	require_once 'php-markdown/Michelf/Markdown.php';
+	require_once 'php-markdown/Michelf/MarkdownExtra.php';
+	// =========================================================================
+	if($markdown){
+		$md = new Michelf\MarkdownExtra;
+	}
 ?>

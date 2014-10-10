@@ -1,3 +1,20 @@
+<?php
+	$contents = preg_replace(
+		array(
+			'/-{'.$contents_line.'}\n?/',
+			'/<guide-style>/',
+			'/<\/guide-style>/',
+		),
+		array(
+			'',
+			$markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">',
+			'</div>',
+		),
+		$contents
+	);
+	if($markdown) $contents = $md->transform($contents);
+	echo $contents;
+?>
 </article>
 <script src="<?php echo $root_path; ?>src/js/lib/jquery-2.1.1.min.js"></script>
 <script src="<?php echo $root_path; ?>src/js/lib/highlight/highlight.pack.js"></script>
