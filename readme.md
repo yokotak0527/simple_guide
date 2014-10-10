@@ -11,7 +11,6 @@ Operating environment
 Without customization, can only be used to prepare the following environment, as is possible.
 
 |PHP|5.3~|
-|-----|-----|
 |browser|chrome, safari, or firefox|
 
  The following environment is required if you want to customize.
