@@ -1,12 +1,15 @@
 <?php
 	// page setting
 	$root_path  = './';
-?>
-<?php
+	$markdown   = true;
+	// -------------------------------------------------------------------------
 	include($root_path.'assets/config.php');
 	include($root_path.'assets/header.php');
+	function contents($md_flg){
+		$md = new Michelf\Markdown;
 ?>
 <div class="guide-style">
+
 	<h1>SIMPLE GUIDE version 0.1</h1>
 	<p>
 		SIMPLE GUIDE is a simple tools of making guide.<br>
@@ -137,4 +140,7 @@ $ npm i
 		You can make products guide, styleguide and so on.
 	</p>
 </div>
-<?php include($root_path.'assets/footer.php'); ?>
+<?php
+	};contents($markdown);
+	include($root_path.'assets/footer.php');
+?>
