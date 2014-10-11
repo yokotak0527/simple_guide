@@ -19,11 +19,25 @@
 	<p>Sed ut perspiciatis unde <em>omnis iste natus error sit voluptatem accusantium doloremque</em> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <a href="#">Nemo enim ipsam voluptatem quia voluptas</a> sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, </p>
 	<hr>
 	<dl>
-		<dt>☆</dt><dd>unde omnis iste natus error sit voluptatem accusantium</dd>
+		<dt>☆</dt><dd>Setunde omnis iste natus error sit voluptatem accusantium</dd>
 		<dt>■</dt><dd>unde omnis iste natus error sit voluptatem accusantium</dd>
 		<dt>01</dt><dd>unde omnis iste natus error sit voluptatem accusantium</dd>
 		<dt>02</dt><dd>unde omnis iste natus error sit voluptatem accusantium</dd>
 	</dl>
+	<hr>
+	<p>あおいあせふぁｓ</p>
+	<ul>
+		<li>あいうえおeaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+	</ul>
+	<ol>
+		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+	</ol>
+	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+	<img src="http://placehold.it/800x300">
 	<hr>
 	<table>
 		<thead>

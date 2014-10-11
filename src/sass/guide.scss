@@ -18,6 +18,7 @@
 		display   : block;
 		max-width : 100%;
 	}
+	// -------------------------------------------------------------------------
 	> h1{
 		display        : block;
 		font-size      : 38px;
@@ -26,6 +27,7 @@
 		a{@extend %link-style;}
 		em{@extend %em-style;}
 	}
+	// -------------------------------------------------------------------------
 	> h2{
 		display        : block;
 		font-size      : 26px;
@@ -38,6 +40,7 @@
 	> h2 + h2{
 		padding-top : 0;
 	}
+	// -------------------------------------------------------------------------
 	> h3{
 		font-weight    : bold;
 		font-size      : 18px;
@@ -46,18 +49,81 @@
 		a{@extend %link-style;}
 		em{@extend %em-style;}
 	}
+	// -------------------------------------------------------------------------
 	> p{
-		display     : block;
-		line-height : 1.7;
+		display        : block;
+		line-height    : 1.7;
 		a{@extend %link-style;}
 		em{@extend %em-style;}
 		img{@extend %img-style;}
 	}
-	> p + p{ margin-top : 1em; }
+	// > p + p{ margin-top : 0.8em; }
+	> hr + p{ padding-top : 0.15em; }
+	> p + p,
+	> ul + p,
+	> ol + p,
+	> dl + p{ margin-top : 0.5em; }
+	// -------------------------------------------------------------------------
+	> ul{
+		display     : block;
+		line-height : 1.7;
+		li{
+			list-style : disc inside;
+			a{@extend %link-style;}
+			em{@extend %em-style;}
+			img{@extend %img-style;}
+		}
+	}
+	> hr + ul{ padding-top : 0.15em; }
+	> p + ul{ margin-top : 0.4em; }
+	> ul + ul,
+	> ol + ul,
+	> dl + ul{ margin-top : 0.5em; }
+	// -------------------------------------------------------------------------
+	> ol{
+		line-height : 1.7;
+		li{
+			list-style : decimal-leading-zero inside;
+			a{@extend %link-style;}
+			em{@extend %em-style;}
+			img{@extend %img-style;}
+		}
+	}
+	> hr + ol{ padding-top : 0.15em; }
+	> p + ol{ margin-top : 0.4em; }
+	> ul + ol,
+	> ol + ol,
+	> dl + ol{ margin-top : 0.5em; }
+	// -------------------------------------------------------------------------
+	> dl{
+		line-height : 1.7;
+		@extend %clearfix;
+		a{@extend %link-style;}
+		em{@extend %em-style;}
+		img{@extend %img-style;}
+		dt{
+			float : left;
+			clear : both;
+		}
+		dd{
+			padding-left : 1.8em;
+		}
+	}
+	> hr + dl{ padding-top : 0.15em; }
+	> p + dl{ margin-top : 0.4em; }
+	> ul + dl,
+	> ol + dl,
+	> dl + dl{ margin-top : 0.5em; }
+	// -------------------------------------------------------------------------
 	> img{
 		padding : 0.5em 0;
 		@extend %img-style;
 	}
+	> p + img,
+	> ul + img,
+	> ol + img,
+	> dl + img{ margin-top : 0.3em; }
+	// -------------------------------------------------------------------------
 	> hr{
 		display       : block;
 		height        : 1px;
@@ -67,6 +133,7 @@
 		margin        : 0.5em 0 0.5em 0;
 	}
 	> table + hr{margin-top : 1em;}
+	// -------------------------------------------------------------------------
 	> table{
 		margin : 0.5em 0 0.5em 0;
 		th,td{
@@ -101,20 +168,7 @@
 	}
 	> table + table{ margin-top : 1em; }
 	> hr + table{ margin-top : 1em; }
-	> dl{
-		line-height : 1.7;
-		@extend %clearfix;
-		a{@extend %link-style;}
-		em{@extend %em-style;}
-		img{@extend %img-style;}
-		dt{
-			float : left;
-			clear : both;
-		}
-		dd{
-			padding-left : 1.8em;
-		}
-	}
+	// -------------------------------------------------------------------------
 	> .code{
 		padding : 0.5em 0 0.5em 0;
 		.hljs{
