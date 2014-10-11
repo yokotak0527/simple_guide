@@ -1,7 +1,7 @@
 SIMPLE GUIDE version 0.1
 ================================================================================
 
-SIMPLE GUIDE is tools for making simple guide.  
+SIMPLE GUIDE is tools for making simply guide.  
 Operating environment is only PHP5.3~ and browser that chrome, safari, or firefox.  
 You can edit the page with the use of HTML-tags, but write with Markdown conventions more easily.  
 
