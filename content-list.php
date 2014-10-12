@@ -26,9 +26,8 @@
 		<dt>02</dt><dd>unde omnis iste natus error sit voluptatem accusantium</dd>
 	</dl>
 	<hr>
-	<p>あおいあせふぁｓ</p>
 	<ul>
-		<li>あいうえおeaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
+		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
 		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
 		<li>eaque ipsa quae ab illo inventore veritatis et quasi architecto</li>
 	</ul>

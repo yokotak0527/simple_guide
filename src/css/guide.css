@@ -112,10 +112,10 @@
   border: none;
   border-bottom: 1px solid #bbbbbb;
   padding: 0 0;
-  margin: 0.5em 0 0.5em 0;
+  margin: 1em 0 1em 0;
 }
 .guide-style > table + hr {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 .guide-style > table {
   margin: 0.5em 0 0.5em 0;
@@ -146,7 +146,7 @@
   margin-top: 1em;
 }
 .guide-style > hr + table {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 .guide-style > .code {
   padding: 0.5em 0 0.5em 0;
