@@ -43,40 +43,47 @@
 .guide-style > p {
   display: block;
   line-height: 1.7;
-}
-.guide-style > p + p,
-.guide-style > ul + p,
-.guide-style > ol + p,
-.guide-style > dl + p {
   margin-top: 0.5em;
+}
+.guide-style > p + p {
+  margin-top: 0.6em;
+}
+.guide-style > hr + p,
+.guide-style > h1 + p,
+.guide-style > h2 + p,
+.guide-style > h3 + p {
+  margin-top: 0em;
 }
 .guide-style > ul {
   display: block;
   line-height: 1.7;
+  margin-top: 0.5em;
 }
 .guide-style > ul li {
   list-style: disc inside;
 }
-.guide-style > p + ul,
-.guide-style > ul + ul,
-.guide-style > ol + ul,
-.guide-style > dl + ul {
-  margin-top: 0.5em;
+.guide-style > hr + ul,
+.guide-style > h1 + ul,
+.guide-style > h2 + ul,
+.guide-style > h3 + ul {
+  margin-top: 0em;
 }
 .guide-style > ol {
   line-height: 1.7;
+  margin-top: 0.5em;
 }
 .guide-style > ol li {
   list-style: decimal-leading-zero inside;
 }
-.guide-style > p + ol,
-.guide-style > ul + ol,
-.guide-style > ol + ol,
-.guide-style > dl + ol {
-  margin-top: 0.5em;
+.guide-style > hr + ol,
+.guide-style > h1 + ol,
+.guide-style > h2 + ol,
+.guide-style > h3 + ol {
+  margin-top: 0em;
 }
 .guide-style > dl {
   line-height: 1.7;
+  margin-top: 0.5em;
 }
 .guide-style > dl dt {
   float: left;
@@ -85,11 +92,11 @@
 .guide-style > dl dd {
   padding-left: 1.8em;
 }
-.guide-style > p + dl,
-.guide-style > ul + dl,
-.guide-style > ol + dl,
-.guide-style > dl + dl {
-  margin-top: 0.5em;
+.guide-style > hr + dl,
+.guide-style > h1 + dl,
+.guide-style > h2 + dl,
+.guide-style > h3 + dl {
+  margin-top: 0em;
 }
 .guide-style > img {
   padding: 0.5em 0;
@@ -109,10 +116,10 @@
   margin: 1em 0 1em 0;
 }
 .guide-style > table + hr {
-  margin-top: 1.5em;
+  margin-top: 1.3em;
 }
 .guide-style > table {
-  margin: 0.5em 0 0.5em 0;
+  margin-top: 0.5em;
 }
 .guide-style > table th, .guide-style > table td {
   padding: 0.5em 0.7em 0.4em 0.7em;
@@ -141,6 +148,11 @@
 }
 .guide-style > hr + table {
   margin-top: 1.5em;
+}
+.guide-style > h1 + table,
+.guide-style > h2 + table,
+.guide-style > h3 + table {
+  margin-top: 0em;
 }
 .guide-style > .code {
   padding: 0.5em 0 0.5em 0;

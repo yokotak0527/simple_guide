@@ -53,20 +53,25 @@
 	> p{
 		display        : block;
 		line-height    : 1.7;
+		margin-top     : 0.5em;
 		a{@extend %link-style;}
 		em{@extend %em-style;}
 		img{@extend %img-style;}
 	}
-	// > p + p{ margin-top : 0.8em; }
-	// > hr + p{ padding-top : 0.15em; }
-	> p + p,
-	> ul + p,
-	> ol + p,
-	> dl + p{ margin-top : 0.5em; }
+	> p + p{ margin-top : 0.6em; }
+	> hr + p,
+	> h1 + p,
+	> h2 + p,
+	> h3 + p{ margin-top : 0em; }
+	// > p + p,
+	// > ul + p,
+	// > ol + p,
+	// > dl + p{ margin-top : 0.5em; }
 	// -------------------------------------------------------------------------
 	> ul{
 		display     : block;
 		line-height : 1.7;
+		margin-top  : 0.5em;
 		li{
 			list-style : disc inside;
 			a{@extend %link-style;}
@@ -74,14 +79,14 @@
 			img{@extend %img-style;}
 		}
 	}
-	// > hr + ul{ padding-top : 0.15em; }
-	> p + ul,
-	> ul + ul,
-	> ol + ul,
-	> dl + ul{ margin-top : 0.5em; }
+	> hr + ul,
+	> h1 + ul,
+	> h2 + ul,
+	> h3 + ul{ margin-top : 0em; }
 	// -------------------------------------------------------------------------
 	> ol{
 		line-height : 1.7;
+		margin-top  : 0.5em;
 		li{
 			list-style : decimal-leading-zero inside;
 			a{@extend %link-style;}
@@ -89,14 +94,14 @@
 			img{@extend %img-style;}
 		}
 	}
-	// > hr + ol{ padding-top : 0.15em; }
-	> p + ol,
-	> ul + ol,
-	> ol + ol,
-	> dl + ol{ margin-top : 0.5em; }
+	> hr + ol,
+	> h1 + ol,
+	> h2 + ol,
+	> h3 + ol{ margin-top : 0em; }
 	// -------------------------------------------------------------------------
 	> dl{
 		line-height : 1.7;
+		margin-top  : 0.5em;
 		@extend %clearfix;
 		a{@extend %link-style;}
 		em{@extend %em-style;}
@@ -109,11 +114,10 @@
 			padding-left : 1.8em;
 		}
 	}
-	// > hr + dl{ padding-top : 0.15em; }
-	> p + dl,
-	> ul + dl,
-	> ol + dl,
-	> dl + dl{ margin-top : 0.5em; }
+	> hr + dl,
+	> h1 + dl,
+	> h2 + dl,
+	> h3 + dl{ margin-top : 0em; }
 	// -------------------------------------------------------------------------
 	> img{
 		padding : 0.5em 0;
@@ -132,10 +136,11 @@
 		padding       : 0 0;
 		margin        : 1em 0 1em 0;
 	}
-	> table + hr{margin-top : 1.5em;}
+	> table + hr{margin-top : 1.3em;}
 	// -------------------------------------------------------------------------
 	> table{
-		margin : 0.5em 0 0.5em 0;
+		// margin : 0.5em 0 0.5em 0;
+		margin-top : 0.5em;
 		th,td{
 			padding     : 0.5em 0.7em 0.4em 0.7em;
 			text-align  : left;
@@ -168,6 +173,9 @@
 	}
 	> table + table{ margin-top : 1em; }
 	> hr + table{ margin-top : 1.5em; }
+	> h1 + table,
+	> h2 + table,
+	> h3 + table{ margin-top : 0em; }
 	// -------------------------------------------------------------------------
 	> .code{
 		padding : 0.5em 0 0.5em 0;
