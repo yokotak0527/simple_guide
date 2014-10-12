@@ -1,15 +1,15 @@
 <?php
-	$lang             = $lang             ? $lang             : 'en';
-	$charset          = $charset          ? $charset          : 'UTF-8';
-	$guide_title      = $guide_title      ? $guide_title      : 'SIMPLE GUIDE';
-	$guide_title_html = $guide_title_html ? $guide_title_html : 'SIMPLE<br>GUIDE';
-	$page_title       = $page_title       ? $page_title       : false;
-	$add_header       = $add_header       ? $add_header       : '';
-	$add_footer       = $add_footer       ? $add_footer       : '';
-	$highlight_style  = $highlight_style  ? $highlight_style  : 'tomorrow-night-bright';
-	$root_path        = $root_path        ? $root_path        : './';
-	$markdown         = $markdown         ? $markdown         : false;
-	$contents_line    = $contents_line    ? $contents_line    : 80;
+	$lang             = isset($lang)             ? $lang             : 'en';
+	$charset          = isset($charset)          ? $charset          : 'UTF-8';
+	$guide_title      = isset($guide_title)      ? $guide_title      : 'SIMPLE GUIDE';
+	$guide_title_html = isset($guide_title_html) ? $guide_title_html : 'SIMPLE<br>GUIDE';
+	$page_title       = isset($page_title)       ? $page_title       : false;
+	$add_header       = isset($add_header)       ? $add_header       : '';
+	$add_footer       = isset($add_footer)       ? $add_footer       : '';
+	$highlight_style  = isset($highlight_style)  ? $highlight_style  : 'tomorrow-night-bright';
+	$root_path        = isset($root_path)        ? $root_path        : './';
+	$markdown         = isset($markdown)         ? $markdown         : false;
+	$contents_line    = isset($contents_line)    ? $contents_line    : 80;
 	// =========================================================================
 	// developer
 	// =========================================================================

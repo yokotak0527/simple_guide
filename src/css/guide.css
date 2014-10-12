@@ -44,9 +44,6 @@
   display: block;
   line-height: 1.7;
 }
-.guide-style > hr + p {
-  padding-top: 0.15em;
-}
 .guide-style > p + p,
 .guide-style > ul + p,
 .guide-style > ol + p,
@@ -59,9 +56,6 @@
 }
 .guide-style > ul li {
   list-style: disc inside;
-}
-.guide-style > hr + ul {
-  padding-top: 0.15em;
 }
 .guide-style > p + ul {
   margin-top: 0.4em;
@@ -76,9 +70,6 @@
 }
 .guide-style > ol li {
   list-style: decimal-leading-zero inside;
-}
-.guide-style > hr + ol {
-  padding-top: 0.15em;
 }
 .guide-style > p + ol {
   margin-top: 0.4em;
@@ -97,9 +88,6 @@
 }
 .guide-style > dl dd {
   padding-left: 1.8em;
-}
-.guide-style > hr + dl {
-  padding-top: 0.15em;
 }
 .guide-style > p + dl {
   margin-top: 0.4em;

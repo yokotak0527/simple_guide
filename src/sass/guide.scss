@@ -58,7 +58,7 @@
 		img{@extend %img-style;}
 	}
 	// > p + p{ margin-top : 0.8em; }
-	> hr + p{ padding-top : 0.15em; }
+	// > hr + p{ padding-top : 0.15em; }
 	> p + p,
 	> ul + p,
 	> ol + p,
@@ -74,7 +74,7 @@
 			img{@extend %img-style;}
 		}
 	}
-	> hr + ul{ padding-top : 0.15em; }
+	// > hr + ul{ padding-top : 0.15em; }
 	> p + ul{ margin-top : 0.4em; }
 	> ul + ul,
 	> ol + ul,
@@ -89,7 +89,7 @@
 			img{@extend %img-style;}
 		}
 	}
-	> hr + ol{ padding-top : 0.15em; }
+	// > hr + ol{ padding-top : 0.15em; }
 	> p + ol{ margin-top : 0.4em; }
 	> ul + ol,
 	> ol + ol,
@@ -109,7 +109,7 @@
 			padding-left : 1.8em;
 		}
 	}
-	> hr + dl{ padding-top : 0.15em; }
+	// > hr + dl{ padding-top : 0.15em; }
 	> p + dl{ margin-top : 0.4em; }
 	> ul + dl,
 	> ol + dl,
