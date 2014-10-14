@@ -170,7 +170,7 @@
 .guide-style > .preview > div {
   border: 1px solid #555555;
   padding: 0.8em;
-  background: url('../img/preview_bg.gif');
+  background: url('../../img/preview_bg.gif');
 }
 .guide-style > .video {
   padding: 0.5em 0 0.5em 0;
