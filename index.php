@@ -7,7 +7,7 @@
 	$contents = <<<EOD
 --------------------------------------------------------------------------------
 {{set}}
-	<h1>SIMPLE GUIDE version 0.1</h1>
+	<h1>SIMPLE GUIDE version 0.1.0</h1>
 	<p>
 		SIMPLE GUIDE is tools for making simple guide.<br>
 		Operating environment is only PHP5.3~ and browser that chrome, safari, or firefox.<br>

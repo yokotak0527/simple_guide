@@ -28,7 +28,7 @@ function replace($_cnt,$config,&$preview_cnts){
 		global $preview_cnts;
 		$i = count($preview_cnts);
 		$preview_cnts[$i] = $m[1];
-		return '<div class="preview"><div><div id="preview'.$i.'"></div></div></div>';
+		return '<div class="preview"><div id="preview'.$i.'"></div></div>';
 	},$cnt);
 	$preview_cnts = json_encode($preview_cnts);
 	// -------------------------------------------------------------------------

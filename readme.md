@@ -1,4 +1,4 @@
-SIMPLE GUIDE version 0.1
+SIMPLE GUIDE version 0.1.0
 ================================================================================
 
 SIMPLE GUIDE is tools for making simply guide.  

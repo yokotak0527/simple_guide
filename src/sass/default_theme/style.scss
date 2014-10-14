@@ -197,18 +197,14 @@
 			background : image-url('preview_bg.gif');
 			@include box-sizing(border-box);
 		}
-		> div > div{
-			//position : relative;
-			//width    : 100%;
-			//padding  : 0.75% 0 0 0;
-		}
 		iframe{
-			overflow : hidden;
-			position : relative;
-			top      : 0;
-			left     : 0;
-			width    : 100%;
-			height   : auto;
+			width : 100%;
+			// overflow : hidden;
+			//position : relative;
+			//top      : 0;
+			//left     : 0;
+			//width    : 100%;
+			//height   : auto;
 		}
 	}
 	// -------------------------------------------------------------------------
