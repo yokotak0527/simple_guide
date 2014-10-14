@@ -17,6 +17,7 @@
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);
 	// =========================================================================
+	$preview_cnts = array();
 	$php_lib_path = dirname(__FILE__).'/../src/php/';
 	set_include_path(get_include_path().PATH_SEPARATOR.$php_lib_path);
 	require_once 'content-replace.php';

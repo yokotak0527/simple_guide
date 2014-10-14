@@ -2,7 +2,7 @@
 
 namespace contents;
 
-function replace($_cnt,$config){
+function replace($_cnt,$config,&$preview_cnts){
 	$contents_line = $config['contents_line'];
 	$markdown      = $config['markdown'];
 	$cnt           = $_cnt;
@@ -12,21 +12,25 @@ function replace($_cnt,$config){
 			'/{{set}}/',
 			'/{{\/set}}/',
 			'/{{code}}/',
-			'/{{\/code}}/',
-			'/{{preview}}/',
-			'/{{\/preview}}/'
+			'/{{\/code}}/'
 		),
 		array(
 			'',
 			$markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">',
 			'</div>',
 			'<div class="code"><pre><code>',
-			'</code></pre></div>',
-			'<div class="preview"><div>',
-			'</div></div>'
+			'</code></pre></div>'
 		),
 		$cnt
 	);
+	// -------------------------------------------------------------------------
+	$cnt = preg_replace_callback('/{{preview}}(.*){{\/preview}}/s',function($m){
+		global $preview_cnts;
+		$i = count($preview_cnts);
+		$preview_cnts[$i] = $m[1];
+		return '<div class="preview"><div><div id="preview'.$i.'"></div></div></div>';
+	},$cnt);
+	$preview_cnts = json_encode($preview_cnts);
 	// -------------------------------------------------------------------------
 	$cnt = preg_replace_callback('/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/',function($m){
 		$type       = $m[1];

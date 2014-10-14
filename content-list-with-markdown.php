@@ -80,30 +80,50 @@ Sed ut perspiciatis unde *omnis iste natus error sit voluptatem accusantium dolo
 
 - - - - - - - - - - - - - -
 
-	<div class="preview"><div>
-	http://yokotakenji.me/test/simple_guide_sample/
-	</div></div>
-	<hr>
-	<div class="code">
-		<pre><code>
+{{preview}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin  : 0;
+		padding : 0;
+	}
+	body{
+		color : #F00;
+		font-weight : bold;
+	}
+	</style>
+</head>
+<body>
+ddddddd
+</body>
+</html>
+{{/preview}}
+
+- - - - - - - - - - - - - -
+
+{{code}}
 class myClass
 	constructor : (@a,@b)->
 		@c = @a + @b
 		return
-		</code></pre>
-	</div>
-	<hr>
-	<div class="video"><div>
-		<iframe src="//player.vimeo.com/video/51430433" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div></div>
-	<hr>
-	<div class="video"><div>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/_PjBHyfo_T0" allowfullscreen></iframe>
-	</div></div>
-	<hr>
-	<div class="video"><div>
-		<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm24655539?w=490&h=307"></script><noscript><a href="http://www.nicovideo.jp/watch/sm24655539">【ニコニコ動画】【サイコパス２】OP中毒になる動画【PSYCHO-PASS2】</a></noscript>
-	</div></div>
+{{/code}}
+
+- - - - - - - - - - - - - -
+
+{{video vimeo="//player.vimeo.com/video/51430433"}}
+
+- - - - - - - - - - - - - -
+
+{{video youtube="//www.youtube.com/embed/_PjBHyfo_T0"}}
+
+- - - - - - - - - - - - - -
+
+{{video niconico="http://ext.nicovideo.jp/thumb_watch/sm24655539?w=490&h=307"}}
+
 {{/set}}
 --------------------------------------------------------------------------------
 EOD;

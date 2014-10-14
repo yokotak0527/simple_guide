@@ -7,7 +7,6 @@
 	$contents = <<<EOD
 --------------------------------------------------------------------------------
 {{set}}
-
 	<h1>content list</h1>
 	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
 	<h2>content list</h2>
@@ -59,7 +58,36 @@
 	<img src="http://placehold.it/800x300">
 	<hr>
 	{{preview}}
-	http://yokotakenji.me/test/simple_guide_sample/
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Document</title>
+			<style>
+			*{
+				margin  : 0;
+				padding : 0;
+			}
+			body{
+				color : #F00;
+				font-weight : bold;
+			}
+			</style>
+		</head>
+		<body>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		</body>
+		</html>
 	{{/preview}}
 	<hr>
 	{{code}}
