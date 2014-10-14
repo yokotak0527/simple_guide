@@ -6,15 +6,15 @@
 	require_once $root_path.'assets/header.php';
 	$contents = <<<EOD
 --------------------------------------------------------------------------------
-<guide-style>
+{{set}}
 	<h1>SIMPLE GUIDE version 0.1</h1>
 	<p>
 		SIMPLE GUIDE is tools for making simple guide.<br>
 		Operating environment is only PHP5.3~ and browser that chrome, safari, or firefox.<br>
 		You can edit the page with the use of HTML-tags, but write with Markdown conventions more easily.
 	</p>
-</guide-style>
-<guide-style>
+{{/set}}
+{{set}}
 	<h2>Operating environment</h2>
 	<p>Without customization, can only be used to prepare the following environment, as is possible.</p>
 	<table>
@@ -46,17 +46,16 @@
 			</tr>
 		</tbody>
 	</table>
-</guide-style>
-
-<guide-style>
+{{/set}}
+{{set}}
 	<h1>SIMPLE GUIDE version 0.1</h1>
 	<p>
 		SIMPLE GUIDEは簡易なガイドを作るためのツールです。<br>
 		動作に必要な環境はPHPの5.3以上とchromeやsafariといったブラウザのみです。<br>
 		ページはHTMLで編集しますが、Markdown記法でより簡単に書くことも出来ます。
 	</p>
-</guide-style>
-<guide-style>
+{{/set}}
+{{set}}
 	<h2>動作環境</h2>
 	<p>カスタマイズせず使用するだけえあれば、以下の環境を用意するだけで実行可能です。</p>
 	<table>
@@ -88,7 +87,7 @@
 			</tr>
 		</tbody>
 	</table>
-</guide-style>
+{{/set}}
 --------------------------------------------------------------------------------
 EOD;
 	require_once $root_path.'assets/footer.php';

@@ -1,17 +1,8 @@
 <?php
-	$contents = preg_replace(
-		array(
-			'/-{'.$contents_line.'}\n?/',
-			'/<guide-style>/',
-			'/<\/guide-style>/',
-		),
-		array(
-			'',
-			$markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">',
-			'</div>',
-		),
-		$contents
-	);
+	$contents = contents\replace($contents,array(
+		'contents_line' => $contents_line,
+		'markdown'      => $markdown
+	));
 	if($markdown) $contents = $md->transform($contents);
 	echo $contents;
 ?>

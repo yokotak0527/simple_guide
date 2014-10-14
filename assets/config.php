@@ -19,6 +19,7 @@
 	// =========================================================================
 	$php_lib_path = dirname(__FILE__).'/../src/php/';
 	set_include_path(get_include_path().PATH_SEPARATOR.$php_lib_path);
+	require_once 'content-replace.php';
 	require_once 'php-markdown/Michelf/MarkdownInterface.php';
 	require_once 'php-markdown/Michelf/Markdown.php';
 	require_once 'php-markdown/Michelf/MarkdownExtra.php';

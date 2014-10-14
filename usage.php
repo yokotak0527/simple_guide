@@ -6,7 +6,7 @@
 	require_once $root_path.'assets/header.php';
 	$contents = <<<EOD
 --------------------------------------------------------------------------------
-<guide-style>
+{{set}}
 
 使い方
 ========================================
@@ -40,7 +40,7 @@ SIMPLE GUIDEをダウンロードした時に入っていたpage-template.phpを
 page-template.phpを複製し、リネームします。
 
 
-</guide-style>
+{{/set}}
 --------------------------------------------------------------------------------
 EOD;
 	require_once $root_path.'assets/footer.php';
