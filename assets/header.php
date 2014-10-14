@@ -9,5 +9,8 @@
 <?php echo $add_header; ?>
 </head>
 <body>
-<?php include($root_path.'assets/side.php'); ?>
+	<nav>
+		<h1><?php echo $guide_title_html; ?></h1>
+		<?php include($root_path.'assets/side.php'); ?>
+	</nav>
 <article>

@@ -160,20 +160,16 @@ body:after {
   clear: both;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   width: 100%;
   min-height: 100%;
   color: #666666;
   position: relative;
   background: white;
-}
-
-a {
-  color: #0044cc;
-}
-
-body {
-  position: relative;
 }
 
 body > nav {

@@ -1,156 +1,3 @@
-@charset "UTF-8";
-/* ===============================================================
-HTML5 DOCTOR RESET CSS
-===============================================================　*/
-/* html5doctor.com Reset Stylesheet v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #212121;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #444;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-/* ===============================================================
-YUI FONT CSS
-===============================================================　*/
-/*
-YUI 3.4.1 (build 4118)
-Copyright 2011 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-http://yuilibrary.com/license/
-*/
-body {
-  font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  *font-size: small;
-  *font: x-small;
-}
-
-select, input, button, textarea {
-  font: 99% arial,helvetica,clean,sans-serif;
-}
-
-table {
-  font-size: inherit;
-  font: 100%;
-}
-
-pre, code, kbd, samp, tt {
-  font-family: monospace;
-  *font-size: 108%;
-  line-height: 100%;
-}
-
-/* ===============================================================
-yokota
-===============================================================　*/
-body {
-  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, th {
-  font-weight: normal;
-}
-
-img {
-  vertical-align: top;
-  height: auto;
-}
-
-li {
-  list-style: none;
-}
-
 .guide-style > dl {
   *zoom: 1;
 }
@@ -160,9 +7,16 @@ li {
   clear: both;
 }
 
-.guide-style > h1 em, .guide-style > h2 em, .guide-style > p em, .guide-style > table th em, .guide-style > table td em, .guide-style > dl em {
+.guide-style > h1 em, .guide-style > h2 em, .guide-style > h3 em, .guide-style > p em, .guide-style > ul li em, .guide-style > ol li em, .guide-style > dl em, .guide-style > table th em, .guide-style > table td em {
   color: #ff5555;
   font-style: normal;
+}
+.guide-style > h1 a, .guide-style > h2 a, .guide-style > h3 a, .guide-style > p a, .guide-style > ul li a, .guide-style > ol li a, .guide-style > dl a, .guide-style > table th a, .guide-style > table td a {
+  color: #0044cc;
+}
+.guide-style > p img, .guide-style > ul li img, .guide-style > ol li img, .guide-style > dl img, .guide-style > img, .guide-style > table th img, .guide-style > table td img {
+  display: block;
+  max-width: 100%;
 }
 .guide-style > h1 {
   display: block;
@@ -173,7 +27,7 @@ li {
 .guide-style > h2 {
   display: block;
   font-size: 26px;
-  padding-bottom: 0.25em;
+  padding-bottom: 0.2em;
   padding-top: 0.8em;
 }
 .guide-style > h1 + h2,
@@ -183,12 +37,75 @@ li {
 .guide-style > h3 {
   font-weight: bold;
   font-size: 18px;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.3em;
   padding-top: 1.2em;
 }
 .guide-style > p {
   display: block;
   line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > p + p {
+  margin-top: 0.6em;
+}
+.guide-style > hr + p,
+.guide-style > h1 + p,
+.guide-style > h2 + p,
+.guide-style > h3 + p {
+  margin-top: 0em;
+}
+.guide-style > ul {
+  display: block;
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > ul li {
+  list-style: disc inside;
+}
+.guide-style > hr + ul,
+.guide-style > h1 + ul,
+.guide-style > h2 + ul,
+.guide-style > h3 + ul {
+  margin-top: 0em;
+}
+.guide-style > ol {
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > ol li {
+  list-style: decimal-leading-zero inside;
+}
+.guide-style > hr + ol,
+.guide-style > h1 + ol,
+.guide-style > h2 + ol,
+.guide-style > h3 + ol {
+  margin-top: 0em;
+}
+.guide-style > dl {
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > dl dt {
+  float: left;
+  clear: both;
+}
+.guide-style > dl dd {
+  padding-left: 1.8em;
+}
+.guide-style > hr + dl,
+.guide-style > h1 + dl,
+.guide-style > h2 + dl,
+.guide-style > h3 + dl {
+  margin-top: 0em;
+}
+.guide-style > img {
+  padding: 0.5em 0;
+}
+.guide-style > p + img,
+.guide-style > ul + img,
+.guide-style > ol + img,
+.guide-style > dl + img {
+  margin-top: 0.5em;
 }
 .guide-style > hr {
   display: block;
@@ -196,10 +113,13 @@ li {
   border: none;
   border-bottom: 1px solid #bbbbbb;
   padding: 0 0;
-  margin: 0.3em 0 0.5em 0;
+  margin: 1em 0 1em 0;
+}
+.guide-style > table + hr {
+  margin-top: 1.3em;
 }
 .guide-style > table {
-  margin: 0.5em 0 0.5em 0;
+  margin-top: 0.5em;
 }
 .guide-style > table th, .guide-style > table td {
   padding: 0.5em 0.7em 0.4em 0.7em;
@@ -224,17 +144,15 @@ li {
   color: #666666;
 }
 .guide-style > table + table {
-  margin-top: 1.1em;
+  margin-top: 1em;
 }
-.guide-style > dl {
-  line-height: 1.7;
+.guide-style > hr + table {
+  margin-top: 1.5em;
 }
-.guide-style > dl dt {
-  float: left;
-  clear: both;
-}
-.guide-style > dl dd {
-  padding-left: 1.8em;
+.guide-style > h1 + table,
+.guide-style > h2 + table,
+.guide-style > h3 + table {
+  margin-top: 0em;
 }
 .guide-style > .code {
   padding: 0.5em 0 0.5em 0;
@@ -244,7 +162,7 @@ li {
   padding: 0.8em;
   overflow-x: scroll;
   background: #333;
-  font-family: "ricty", monospace;
+  font-family: 'ricty',monospace;
 }
 .guide-style > .preview {
   padding: 0.5em 0 0.5em 0;
@@ -253,6 +171,24 @@ li {
   border: 1px solid #555555;
   padding: 0.8em;
   background: url('../img/preview_bg.gif');
+}
+.guide-style > .video {
+  padding: 0.5em 0 0.5em 0;
+}
+.guide-style > .video > div {
+  position: relative;
+  height: 0;
+  padding: 30px 0 56.25%;
+  overflow: hidden;
+}
+.guide-style > .video > div > iframe,
+.guide-style > .video > div > object,
+.guide-style > .video > div > embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .guide-style:first-child h1 {
