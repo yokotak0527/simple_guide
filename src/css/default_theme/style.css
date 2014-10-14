@@ -169,8 +169,20 @@
 }
 .guide-style > .preview > div {
   border: 1px solid #555555;
+  width: 100%;
   padding: 0.8em;
-  background: url('../img/preview_bg.gif');
+  background: url('../../img/preview_bg.gif');
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.guide-style > .preview iframe {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 .guide-style > .video {
   padding: 0.5em 0 0.5em 0;

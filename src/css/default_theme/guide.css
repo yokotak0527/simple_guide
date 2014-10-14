@@ -1,0 +1,207 @@
+.guide-style > dl {
+  *zoom: 1;
+}
+.guide-style > dl:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.guide-style > h1 em, .guide-style > h2 em, .guide-style > h3 em, .guide-style > p em, .guide-style > ul li em, .guide-style > ol li em, .guide-style > dl em, .guide-style > table th em, .guide-style > table td em {
+  color: #ff5555;
+  font-style: normal;
+}
+.guide-style > h1 a, .guide-style > h2 a, .guide-style > h3 a, .guide-style > p a, .guide-style > ul li a, .guide-style > ol li a, .guide-style > dl a, .guide-style > table th a, .guide-style > table td a {
+  color: #0044cc;
+}
+.guide-style > p img, .guide-style > ul li img, .guide-style > ol li img, .guide-style > dl img, .guide-style > img, .guide-style > table th img, .guide-style > table td img {
+  display: block;
+  max-width: 100%;
+}
+.guide-style > h1 {
+  display: block;
+  font-size: 38px;
+  padding-top: 0.6em;
+  padding-bottom: 0.5em;
+}
+.guide-style > h2 {
+  display: block;
+  font-size: 26px;
+  padding-bottom: 0.2em;
+  padding-top: 0.8em;
+}
+.guide-style > h1 + h2,
+.guide-style > h2 + h2 {
+  padding-top: 0;
+}
+.guide-style > h3 {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 0.3em;
+  padding-top: 1.2em;
+}
+.guide-style > p {
+  display: block;
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > p + p {
+  margin-top: 0.6em;
+}
+.guide-style > hr + p,
+.guide-style > h1 + p,
+.guide-style > h2 + p,
+.guide-style > h3 + p {
+  margin-top: 0em;
+}
+.guide-style > ul {
+  display: block;
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > ul li {
+  list-style: disc inside;
+}
+.guide-style > hr + ul,
+.guide-style > h1 + ul,
+.guide-style > h2 + ul,
+.guide-style > h3 + ul {
+  margin-top: 0em;
+}
+.guide-style > ol {
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > ol li {
+  list-style: decimal-leading-zero inside;
+}
+.guide-style > hr + ol,
+.guide-style > h1 + ol,
+.guide-style > h2 + ol,
+.guide-style > h3 + ol {
+  margin-top: 0em;
+}
+.guide-style > dl {
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.guide-style > dl dt {
+  float: left;
+  clear: both;
+}
+.guide-style > dl dd {
+  padding-left: 1.8em;
+}
+.guide-style > hr + dl,
+.guide-style > h1 + dl,
+.guide-style > h2 + dl,
+.guide-style > h3 + dl {
+  margin-top: 0em;
+}
+.guide-style > img {
+  padding: 0.5em 0;
+}
+.guide-style > p + img,
+.guide-style > ul + img,
+.guide-style > ol + img,
+.guide-style > dl + img {
+  margin-top: 0.5em;
+}
+.guide-style > hr {
+  display: block;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 0 0;
+  margin: 1em 0 1em 0;
+}
+.guide-style > table + hr {
+  margin-top: 1.3em;
+}
+.guide-style > table {
+  margin-top: 0.5em;
+}
+.guide-style > table th, .guide-style > table td {
+  padding: 0.5em 0.7em 0.4em 0.7em;
+  text-align: left;
+  border: 1px solid #666666;
+  line-height: 1.7;
+}
+.guide-style > table thead th {
+  background: none;
+  color: #666666;
+}
+.guide-style > table thead td {
+  background: none;
+  color: #666666;
+}
+.guide-style > table tbody th {
+  background: none;
+  color: #666666;
+}
+.guide-style > table tbody td {
+  background: none;
+  color: #666666;
+}
+.guide-style > table + table {
+  margin-top: 1em;
+}
+.guide-style > hr + table {
+  margin-top: 1.5em;
+}
+.guide-style > h1 + table,
+.guide-style > h2 + table,
+.guide-style > h3 + table {
+  margin-top: 0em;
+}
+.guide-style > .code {
+  padding: 0.5em 0 0.5em 0;
+}
+.guide-style > .code .hljs {
+  line-height: 1.4;
+  padding: 0.8em;
+  overflow-x: scroll;
+  background: #333;
+  font-family: 'ricty',monospace;
+}
+.guide-style > .preview {
+  padding: 0.5em 0 0.5em 0;
+}
+.guide-style > .preview > div {
+  border: 1px solid #555555;
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.guide-style > .preview iframe {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.guide-style > .video {
+  padding: 0.5em 0 0.5em 0;
+}
+.guide-style > .video > div {
+  position: relative;
+  height: 0;
+  padding: 30px 0 56.25%;
+  overflow: hidden;
+}
+.guide-style > .video > div > iframe,
+.guide-style > .video > div > object,
+.guide-style > .video > div > embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.guide-style:first-child h1 {
+  padding-top: 0;
+}

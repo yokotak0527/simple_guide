@@ -10,14 +10,17 @@
 	$root_path        = isset($root_path)        ? $root_path        : './';
 	$markdown         = isset($markdown)         ? $markdown         : false;
 	$contents_line    = isset($contents_line)    ? $contents_line    : 80;
+	$theme            = isset($theme)            ? $theme            : 'default_theme';
 	// =========================================================================
 	// developer
 	// =========================================================================
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);
 	// =========================================================================
+	$preview_cnts = array();
 	$php_lib_path = dirname(__FILE__).'/../src/php/';
 	set_include_path(get_include_path().PATH_SEPARATOR.$php_lib_path);
+	require_once 'content-replace.php';
 	require_once 'php-markdown/Michelf/MarkdownInterface.php';
 	require_once 'php-markdown/Michelf/Markdown.php';
 	require_once 'php-markdown/Michelf/MarkdownExtra.php';

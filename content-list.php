@@ -6,8 +6,7 @@
 	require_once $root_path.'assets/header.php';
 	$contents = <<<EOD
 --------------------------------------------------------------------------------
-<guide-style>
-
+{{set}}
 	<h1>content list</h1>
 	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
 	<h2>content list</h2>
@@ -58,48 +57,52 @@
 	<hr>
 	<img src="http://placehold.it/800x300">
 	<hr>
-	<table>
-		<thead>
-			<tr>
-				<th>thead th</th>
-				<td>thead td</td>
-				<td>thead td</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th>tbody th</th>
-				<td>tbody td</td>
-				<td>tbody td</td>
-			</tr>
-		</tbody>
-	</table>
+	{{preview}}
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Document</title>
+			<style>
+			*{
+				margin  : 0;
+				padding : 0;
+			}
+			body{
+				color : #F00;
+				font-weight : bold;
+			}
+			</style>
+		</head>
+		<body>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		asdfasefasefasdfasdfasdfasdfadfa<br>
+		</body>
+		</html>
+	{{/preview}}
 	<hr>
-	<div class="preview"><div>
-	http://yokotakenji.me/test/simple_guide_sample/
-	</div></div>
-	<hr>
-	<div class="code">
-		<pre><code>
+	{{code}}
 class myClass
 	constructor : (@a,@b)->
 		@c = @a + @b
 		return
-		</code></pre>
-	</div>
+	{{/code}}
 	<hr>
-	<div class="video"><div>
-		<iframe src="//player.vimeo.com/video/51430433" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div></div>
+	{{video vimeo="//player.vimeo.com/video/51430433"}}
 	<hr>
-	<div class="video"><div>
-		<iframe width="560" height="315" src="//www.youtube.com/embed/_PjBHyfo_T0" frameborder="0" allowfullscreen></iframe>
-	</div></div>
+	{{video youtube="//www.youtube.com/embed/_PjBHyfo_T0"}}
 	<hr>
-	<div class="video"><div>
-		<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm24655539?w=490&h=307"></script><noscript><a href="http://www.nicovideo.jp/watch/sm24655539">【ニコニコ動画】【サイコパス２】OP中毒になる動画【PSYCHO-PASS2】</a></noscript>
-	</div></div>
-</guide-style>
+	{{video niconico="http://ext.nicovideo.jp/thumb_watch/sm24655539?w=490&h=307"}}
+{{/set}}
 --------------------------------------------------------------------------------
 EOD;
 	require_once $root_path.'assets/footer.php';
