@@ -1,6 +1,7 @@
 <?php
 	// page setting
 	$markdown  = true;
+	$root_path = './';
 	// -------------------------------------------------------------------------
 	require_once $root_path.'assets/config.php';
 	require_once $root_path.'assets/header.php';
