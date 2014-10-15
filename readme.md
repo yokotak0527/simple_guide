@@ -6,11 +6,8 @@ Operating environment is only PHP5.3~ and browser that chrome, safari, or firefo
 You can edit the page with the use of HTML-tags, but write with Markdown conventions more easily.  
 [DEMO](http://yokotakenji.me/test/simple_guide/)
 
-Task
+Operating environment
 --------------------------------------------------------------------------------
-
-* anchor link
-* code type
 
 <table>
 <tr>
@@ -22,3 +19,9 @@ Task
 <td>chrome, safari, or firefox</td>
 </tr>
 </table>
+
+Task
+--------------------------------------------------------------------------------
+
+* anchor link
+* code type
