@@ -20,18 +20,18 @@ Operating environment
 </tr>
 </table>
 
-install
+Install
 --------------------------------------------------------------------------------
 
     $ git clone git@github.com:yokotak0527/simple_guide.git
-    cd simple_guide
-    git submodule init
-    git submodule update
+    $ cd simple_guide
+    $ git submodule init
+    $ git submodule update
 
 if you want to customize the theme or you want to use SIMPLE GUIDE as if styleguide
 
-    cd simple_giude/src
-    npm i
+    $ cd simple_giude/src
+    $ npm i
 
 Task
 --------------------------------------------------------------------------------
