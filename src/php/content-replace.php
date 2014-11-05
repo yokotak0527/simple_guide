@@ -12,12 +12,13 @@ function replace($_cnt,$config){
 	// -------------------------------------------------------------------------
 	$cnt           = preg_replace('/-{'.$contents_line.'}\n?/','',$cnt);
 	// -------------------------------------------------------------------------
+	if($markdown) $cnt = htmlspecialchars($cnt);
 	// ショートタグの置換
 	$cnt = preg_replace_callback(
 		array(
 			'/{{set}}|{{\/set}}/',
 			'/{{preview}}|{{\/preview}}/',
-			'/{{code}}|{{\/code}}/'
+			'/{{code}}|{{\/code}}/s'
 		),
 		function($m){
 			global $markdown;
@@ -37,6 +38,7 @@ function replace($_cnt,$config){
 			}
 			// コード
 			if($m[0] == '{{code}}'){
+
 				return '<div class="code"><pre><code>';
 			}
 			else if($m[0] == '{{/code}}'){
@@ -45,6 +47,17 @@ function replace($_cnt,$config){
 		},
 		$cnt
 	);
+	if($markdown){
+		$cnt = preg_replace_callback(
+			'/&lt;iframe[\sA-Za-z0-9&quot;="\'_\-\/\.]*/s',
+			function($m){
+				preg_match('/src=&quot;([0-9a-z_\-\/\.]*)/i',$m[0],$src);
+				$src = $src[1];
+				return '<iframe frameborder="0" src="'.$src.'"></iframe>';
+			},
+			$cnt
+		);
+	}
 	// -------------------------------------------------------------------------
 	$cnt = preg_replace_callback('/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/',function($m){
 		$type       = $m[1];

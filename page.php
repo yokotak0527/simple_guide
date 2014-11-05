@@ -1,7 +1,7 @@
 <?php
 	// page setting
 	$root_path     = './';
-	$markdown      = true;
+	// $markdown      = true;
 	$previewHeader = '
 		<body>';
 	$previewFooter = '
