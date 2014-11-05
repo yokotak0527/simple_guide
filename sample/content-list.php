@@ -1,6 +1,6 @@
 <?php
 	// page setting
-	$root_path = './';
+	$root_path = '../';
 	// -------------------------------------------------------------------------
 	require_once $root_path.'assets/config.php';
 	require_once $root_path.'assets/header.php';

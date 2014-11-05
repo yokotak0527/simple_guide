@@ -7,15 +7,15 @@ $(->
 		win     = obj.contentWindow
 		_loaded = null
 		if(win.onload) then _loaded = win.onload
-		win.onload = ->
-			$iframe = $(obj)
-			$iframe.css('height',$(win).height())
-			setTimeout(((_$iframe,_$win)->
-				return ->
-					_$iframe.css('height',_$win.height())
-					return
-			)($iframe,$(win)),2000)
-			return
+		win.onload = ((_win,_obj,_loaded)->
+			return ->
+				$html   = $('html',_win.document)
+				$iframe = $(_obj)
+				$iframe.css('height',$html.height())
+				console.log $html.height()
+				if(_loaded) then _loaded()
+				return
+		)(win,obj,_loaded)
 		return
 	)
 	return

@@ -11,16 +11,18 @@
       if (win.onload) {
         _loaded = win.onload;
       }
-      win.onload = function() {
-        var $iframe;
-        $iframe = $(obj);
-        $iframe.css('height', $(win).height());
-        setTimeout((function(_$iframe, _$win) {
-          return function() {
-            _$iframe.css('height', _$win.height());
-          };
-        })($iframe, $(win)), 2000);
-      };
+      win.onload = (function(_win, _obj, _loaded) {
+        return function() {
+          var $html, $iframe;
+          $html = $('html', _win.document);
+          $iframe = $(_obj);
+          $iframe.css('height', $html.height());
+          console.log($html.height());
+          if (_loaded) {
+            _loaded();
+          }
+        };
+      })(win, obj, _loaded);
     });
   });
 

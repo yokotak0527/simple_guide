@@ -1,11 +1,6 @@
 <?php
 	// page setting
-	$root_path     = './';
-	// $markdown      = true;
-	$previewHeader = '
-		<body>';
-	$previewFooter = '
-		</body>';
+	$root_path     = '../';
 	// -------------------------------------------------------------------------
 	require_once $root_path.'assets/config.php';
 	require_once $root_path.'assets/header.php';
@@ -13,35 +8,16 @@
 --------------------------------------------------------------------------------
 {{set}}
 
-# set01
+# styleguide sample
 
+{{preview}}
+<iframe frameborder="0" src="style_template/sample1.html"></iframe>
+{{/preview}}
+{{code}}
+<input type="button" class="button" value="sample">
+{{/code}}
 {{preview}}
 <iframe frameborder="0" src="style_template/sample2.html"></iframe>
-{{/preview}}
-
-{{code}}
-<div>
-	<h1>asdfsdd</h1>
-</div>
-{{/code}}
-
-{{code}}
-<?php
-	echo "hoge";
-?>
-{{/code}}
-
-{{/set}}
-
-
-
-
-{{set}}
-
-# set02
-
-{{preview}}
-<iframe frameborder="0" src="style_template/sample.html"></iframe>
 {{/preview}}
 
 {{/set}}
