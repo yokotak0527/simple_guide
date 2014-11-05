@@ -25,6 +25,7 @@
 	require_once 'php-markdown/Michelf/Markdown.php';
 	require_once 'php-markdown/Michelf/MarkdownExtra.php';
 	// =========================================================================
+	$esc = function($output){return htmlspecialchars($output);};
 	if($markdown){
 		$md = new Michelf\MarkdownExtra;
 	}

@@ -2,8 +2,19 @@
   var $code, $codes, _i, _len;
 
   $(function() {
-    var $iframes;
+    var $iframes, heightChanged;
     $iframes = $('.preview > div > iframe');
+    heightChanged = function(_win, _obj, _loaded) {
+      return function() {
+        var $html, $iframe;
+        $html = $('html', _win.document);
+        $iframe = $(_obj);
+        $iframe.css('height', $html.height());
+        if (_loaded) {
+          _loaded();
+        }
+      };
+    };
     $.each($iframes, function(i, obj) {
       var win, _loaded;
       win = obj.contentWindow;
@@ -11,18 +22,12 @@
       if (win.onload) {
         _loaded = win.onload;
       }
-      win.onload = (function(_win, _obj, _loaded) {
+      win.onload = heightChanged(win, obj, _loaded);
+      setTimeout((function(_win, _obj, _loaded) {
         return function() {
-          var $html, $iframe;
-          $html = $('html', _win.document);
-          $iframe = $(_obj);
-          $iframe.css('height', $html.height());
-          console.log($html.height());
-          if (_loaded) {
-            _loaded();
-          }
+          heightChanged(_win, _obj, _loaded)();
         };
-      })(win, obj, _loaded);
+      })(win, obj, _loaded), 1000);
     });
   });
 

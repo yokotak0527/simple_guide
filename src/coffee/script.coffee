@@ -3,19 +3,26 @@
 # ==============================================================================
 $(->
 	$iframes = $('.preview > div > iframe')
+	heightChanged = (_win,_obj,_loaded)->
+		return ->
+			$html   = $('html',_win.document)
+			$iframe = $(_obj)
+			$iframe.css('height',$html.height())
+			if(_loaded) then _loaded()
+			return
+
 	$.each($iframes,(i,obj)->
 		win     = obj.contentWindow
 		_loaded = null
 		if(win.onload) then _loaded = win.onload
-		win.onload = ((_win,_obj,_loaded)->
-			return ->
-				$html   = $('html',_win.document)
-				$iframe = $(_obj)
-				$iframe.css('height',$html.height())
-				console.log $html.height()
-				if(_loaded) then _loaded()
+
+		win.onload = heightChanged(win,obj,_loaded)
+		setTimeout(((_win,_obj,_loaded)->
+			return->
+				heightChanged(_win,_obj,_loaded)()
 				return
-		)(win,obj,_loaded)
+		)(win,obj,_loaded),1000)
+
 		return
 	)
 	return

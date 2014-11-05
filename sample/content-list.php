@@ -57,46 +57,6 @@
 	<hr>
 	<img src="http://placehold.it/800x300">
 	<hr>
-	{{preview}}
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<title>Document</title>
-			<style>
-			*{
-				margin  : 0;
-				padding : 0;
-			}
-			body{
-				color : #F00;
-				font-weight : bold;
-			}
-			</style>
-		</head>
-		<body>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		asdfasefasefasdfasdfasdfasdfadfa<br>
-		</body>
-		</html>
-	{{/preview}}
-	<hr>
-	{{code}}
-class myClass
-	constructor : (@a,@b)->
-		@c = @a + @b
-		return
-	{{/code}}
-	<hr>
 	{{video vimeo="//player.vimeo.com/video/51430433"}}
 	<hr>
 	{{video youtube="//www.youtube.com/embed/_PjBHyfo_T0"}}

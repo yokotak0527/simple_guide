@@ -1,4 +1,4 @@
-SIMPLE GUIDE version 0.1.0
+SIMPLE GUIDE version 0.1.5
 ================================================================================
 
 SIMPLE GUIDE is tools for making simply guide.  
@@ -27,11 +27,6 @@ Install
     $ cd simple_guide
     $ git submodule init
     $ git submodule update
-
-if you want to customize the theme or you want to use SIMPLE GUIDE as if styleguide
-
-    $ cd simple_giude/src
-    $ npm i
 
 Task
 --------------------------------------------------------------------------------

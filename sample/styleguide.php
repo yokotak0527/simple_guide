@@ -8,17 +8,20 @@
 --------------------------------------------------------------------------------
 {{set}}
 
-# styleguide sample
+<h1>styleguide sample</h1>
 
 {{preview}}
 <iframe frameborder="0" src="style_template/sample1.html"></iframe>
 {{/preview}}
-{{code}}
+{{code}}{$esc('
 <input type="button" class="button" value="sample">
-{{/code}}
+')}{{/code}}
 {{preview}}
 <iframe frameborder="0" src="style_template/sample2.html"></iframe>
 {{/preview}}
+{{code}}{$esc('
+<input type="button" class="button" value="sample">
+')}{{/code}}
 
 {{/set}}
 

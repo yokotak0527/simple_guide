@@ -17,7 +17,8 @@ function replace($_cnt,$config){
 	$cnt = preg_replace_callback(
 		array(
 			'/{{set}}|{{\/set}}/',
-			'/{{preview}}|{{\/preview}}/'
+			'/{{preview}}|{{\/preview}}/',
+			'/{{code}}|{{\/code}}/'
 		),
 		function($m){
 			global $markdown;
@@ -35,25 +36,19 @@ function replace($_cnt,$config){
 			else if($m[0] == '{{/preview}}'){
 				return '</div></div>';
 			}
+			// コード
+			if($m[0] == '{{code}}'){
+				return '<div class="code"><pre><code>';
+			}
+			else if($m[0] == '{{/code}}'){
+				return '</code></pre></div>';
+			}
 		},
 		$cnt
 	);
 	// -------------------------------------------------------------------------
 	// マークダウン時
 	if($markdown){
-		// コードショートカット
-		$cnt = preg_replace_callback(
-			array('/{{code}}|{{\/code}}/'),
-			function($m){
-				if($m[0] == '{{code}}'){
-					return '<div class="code"><pre><code>';
-				}
-				else if($m[0] == '{{/code}}'){
-					return '</code></pre></div>';
-				}
-			},
-			$cnt
-		);
 		// プレビューショートカット
 		$cnt = preg_replace_callback(
 			'/&lt;iframe[\sA-Za-z0-9&quot;="\'_\-\/\.]*/s',
@@ -64,27 +59,10 @@ function replace($_cnt,$config){
 			},
 			$cnt
 		);
-	}else{
-		$cnt = preg_replace_callback(
-			// array('/{{code}}\n.+\n{{\/code}}/'),
-			array('/{{code}}(.)*/'),
-			function($m){
-				echo '<pre>';
-				var_dump(htmlspecialchars($m[1]));
-				echo '</pre>';
-				//if($m[0] == '{{code}}'){
-				//	return '<div class="code"><pre><code>';
-				//}
-				//else if($m[0] == '{{/code}}'){
-				//	return '</code></pre></div>';
-				//}
-				return '';
-			},
-			$cnt
-		);
 	}
 	// -------------------------------------------------------------------------
-	$cnt = preg_replace_callback('/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/',function($m){
+	$videRegExp = $markdown ? '/{{video\s(youtube|vimeo|niconico)=(&quot;|'.preg_quote("'").')(.*)(&quot;|'.preg_quote("'").')}}/' : '/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/';
+	$cnt = preg_replace_callback($videRegExp,function($m){
 		$type       = $m[1];
 		$url        = $m[3];
 		$video_cnt  = '';

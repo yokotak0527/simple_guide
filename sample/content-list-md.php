@@ -45,22 +45,9 @@ Sed ut perspiciatis unde *omnis iste natus error sit voluptatem accusantium dolo
 
 - - - - - - - - - - - - - -
 
-<table>
-	<thead>
-		<tr>
-			<th>thead th</th>
-			<td>thead td</td>
-			<td>thead td</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>tbody th</th>
-			<td>tbody td</td>
-			<td>tbody td</td>
-		</tr>
-	</tbody>
-</table>
+| thead th | thead th | thead th |
+|:---------|---------:|:--------:|
+| tbody td | tbody td | tbody td |
 
 - - - - - - - - - - - - - -
 
@@ -80,41 +67,7 @@ Sed ut perspiciatis unde *omnis iste natus error sit voluptatem accusantium dolo
 
 - - - - - - - - - - - - - -
 
-{{preview}}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-	*{
-		margin  : 0;
-		padding : 0;
-	}
-	body{
-		color : #F00;
-		font-weight : bold;
-	}
-	</style>
-</head>
-<body>
-ddddddd
-</body>
-</html>
-{{/preview}}
-
-- - - - - - - - - - - - - -
-
-{{code}}
-class myClass
-	constructor : (@a,@b)->
-		@c = @a + @b
-		return
-{{/code}}
-
-- - - - - - - - - - - - - -
-
-{{video vimeo="//player.vimeo.com/video/51430433"}}
+{{video vimeo='//player.vimeo.com/video/51430433'}}
 
 - - - - - - - - - - - - - -
 
