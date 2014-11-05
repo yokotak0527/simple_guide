@@ -3,53 +3,45 @@
 namespace contents;
 
 function replace($_cnt,$config){
+	global $previewCnt;
 	$contents_line = $config['contents_line'];
 	$markdown      = $config['markdown'];
 	$cnt           = $_cnt;
 	$previewCount  = 0;
 	$temp          = null;
-	$cnt           = preg_replace(
-		array(
-			'/-{'.$contents_line.'}\n?/',
-			'/{{set}}/',
-			'/{{\/set}}/'
-		),
-		array(
-			'',
-			$markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">',
-			'</div>'
-		),
-		$cnt
-	);
 	// -------------------------------------------------------------------------
-	// コードタグの置換
-	$cnt = preg_replace_callback(
-		array('/{{code}}([^({{\/code}}).]*){{\/code}}/s'),
-		function($m){
-			var_dump("adsfsdd");
-			$temp = '<div class="code"><pre><code>'.$m[1].'</code></pre></div>';
-			return $temp;
-		},
-		$cnt
-	);
-	//$cnt = preg_replace_callback(
-	//	array('/{{code}}([^({{\/code}}).]*){{\/code}}/s'),
-	//	function($m){
-	//		var_dump("adsfsdd");
-	//		$temp = '<div class="code"><pre><code>'.$m[1].'</code></pre></div>';
-	//		return $temp;
-	//	},
-	//	$cnt
-	//);
+	$cnt           = preg_replace('/-{'.$contents_line.'}\n?/','',$cnt);
 	// -------------------------------------------------------------------------
-	// プレビュータグの置換
+	// ショートタグの置換
 	$cnt = preg_replace_callback(
-		array('/{{preview}}([^({{\/preview}}).]*){{\/preview}}/s'),
+		array(
+			'/{{set}}|{{\/set}}/',
+			'/{{preview}}|{{\/preview}}/',
+			'/{{code}}|{{\/code}}/'
+		),
 		function($m){
-			global $previewCount;
-			$temp = '<div class="preview"><div id="preview'.$previewCount.'">'.$m[1].'</div></div>';
-			$previewCount++;
-			return $temp;
+			global $markdown;
+			// set
+			if($m[0] == '{{set}}'){
+				return $markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">';
+			}
+			else if($m[0] == '{{/set}}'){
+				return '</div>';
+			}
+			// プレビュー
+			if($m[0] == '{{preview}}'){
+				return '<div class="preview"><div>';
+			}
+			else if($m[0] == '{{/preview}}'){
+				return '</div></div>';
+			}
+			// コード
+			if($m[0] == '{{code}}'){
+				return '<div class="code"><pre><code>';
+			}
+			else if($m[0] == '{{/code}}'){
+				return '</code></pre></div>';
+			}
 		},
 		$cnt
 	);

@@ -178,6 +178,7 @@
 }
 .guide-style > .preview iframe {
   width: 100%;
+  height: 0;
 }
 .guide-style > .video {
   padding: 0.5em 0 0.5em 0;

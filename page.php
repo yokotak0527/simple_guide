@@ -3,16 +3,9 @@
 	$root_path     = './';
 	$markdown      = true;
 	$previewHeader = '
-		<!DOCTYPE html>
-		<html lang="jp">
-		<head>
-			<meta charset="UTF-8">
-			<title>Document</title>
-		</head>
 		<body>';
 	$previewFooter = '
-		</body>
-		</html>';
+		</body>';
 	// -------------------------------------------------------------------------
 	require_once $root_path.'assets/config.php';
 	require_once $root_path.'assets/header.php';
@@ -23,11 +16,19 @@
 # set01
 
 {{preview}}
-abc
+<iframe frameborder="0" src="style_template/sample2.html"></iframe>
 {{/preview}}
 
 {{code}}
-<h1>hogegegege</h1>
+<div>
+	<h1>asdfsdd</h1>
+</div>
+{{/code}}
+
+{{code}}
+<?php
+	echo "hoge";
+?>
 {{/code}}
 
 {{/set}}
@@ -40,7 +41,7 @@ abc
 # set02
 
 {{preview}}
-123
+<iframe frameborder="0" src="style_template/sample.html"></iframe>
 {{/preview}}
 
 {{/set}}
