@@ -17,8 +17,7 @@ function replace($_cnt,$config){
 	$cnt = preg_replace_callback(
 		array(
 			'/{{set}}|{{\/set}}/',
-			'/{{preview}}|{{\/preview}}/',
-			'/{{code}}|{{\/code}}/s'
+			'/{{preview}}|{{\/preview}}/'
 		),
 		function($m){
 			global $markdown;
@@ -36,24 +35,50 @@ function replace($_cnt,$config){
 			else if($m[0] == '{{/preview}}'){
 				return '</div></div>';
 			}
-			// コード
-			if($m[0] == '{{code}}'){
-
-				return '<div class="code"><pre><code>';
-			}
-			else if($m[0] == '{{/code}}'){
-				return '</code></pre></div>';
-			}
 		},
 		$cnt
 	);
+	// -------------------------------------------------------------------------
+	// マークダウン時
 	if($markdown){
+		// コードショートカット
+		$cnt = preg_replace_callback(
+			array('/{{code}}|{{\/code}}/'),
+			function($m){
+				if($m[0] == '{{code}}'){
+					return '<div class="code"><pre><code>';
+				}
+				else if($m[0] == '{{/code}}'){
+					return '</code></pre></div>';
+				}
+			},
+			$cnt
+		);
+		// プレビューショートカット
 		$cnt = preg_replace_callback(
 			'/&lt;iframe[\sA-Za-z0-9&quot;="\'_\-\/\.]*/s',
 			function($m){
 				preg_match('/src=&quot;([0-9a-z_\-\/\.]*)/i',$m[0],$src);
 				$src = $src[1];
 				return '<iframe frameborder="0" src="'.$src.'"></iframe>';
+			},
+			$cnt
+		);
+	}else{
+		$cnt = preg_replace_callback(
+			// array('/{{code}}\n.+\n{{\/code}}/'),
+			array('/{{code}}(.)*/'),
+			function($m){
+				echo '<pre>';
+				var_dump(htmlspecialchars($m[1]));
+				echo '</pre>';
+				//if($m[0] == '{{code}}'){
+				//	return '<div class="code"><pre><code>';
+				//}
+				//else if($m[0] == '{{/code}}'){
+				//	return '</code></pre></div>';
+				//}
+				return '';
 			},
 			$cnt
 		);
