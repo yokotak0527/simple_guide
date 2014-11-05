@@ -3,56 +3,86 @@
 namespace contents;
 
 function replace($_cnt,$config){
+	global $previewCnt;
 	$contents_line = $config['contents_line'];
 	$markdown      = $config['markdown'];
 	$cnt           = $_cnt;
 	$previewCount  = 0;
 	$temp          = null;
-	$cnt           = preg_replace(
-		array(
-			'/-{'.$contents_line.'}\n?/',
-			'/{{set}}/',
-			'/{{\/set}}/'
-		),
-		array(
-			'',
-			$markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">',
-			'</div>'
-		),
-		$cnt
-	);
 	// -------------------------------------------------------------------------
-	// コードタグの置換
+	$cnt           = preg_replace('/-{'.$contents_line.'}\n?/','',$cnt);
+	// -------------------------------------------------------------------------
+	if($markdown) $cnt = htmlspecialchars($cnt);
+	// ショートタグの置換
 	$cnt = preg_replace_callback(
-		array('/{{code}}([^({{\/code}}).]*){{\/code}}/s'),
+		array(
+			'/{{set}}|{{\/set}}/',
+			'/{{preview}}|{{\/preview}}/'
+		),
 		function($m){
-			var_dump("adsfsdd");
-			$temp = '<div class="code"><pre><code>'.$m[1].'</code></pre></div>';
-			return $temp;
+			global $markdown;
+			// set
+			if($m[0] == '{{set}}'){
+				return $markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">';
+			}
+			else if($m[0] == '{{/set}}'){
+				return '</div>';
+			}
+			// プレビュー
+			if($m[0] == '{{preview}}'){
+				return '<div class="preview"><div>';
+			}
+			else if($m[0] == '{{/preview}}'){
+				return '</div></div>';
+			}
 		},
 		$cnt
 	);
-	//$cnt = preg_replace_callback(
-	//	array('/{{code}}([^({{\/code}}).]*){{\/code}}/s'),
-	//	function($m){
-	//		var_dump("adsfsdd");
-	//		$temp = '<div class="code"><pre><code>'.$m[1].'</code></pre></div>';
-	//		return $temp;
-	//	},
-	//	$cnt
-	//);
 	// -------------------------------------------------------------------------
-	// プレビュータグの置換
-	$cnt = preg_replace_callback(
-		array('/{{preview}}([^({{\/preview}}).]*){{\/preview}}/s'),
-		function($m){
-			global $previewCount;
-			$temp = '<div class="preview"><div id="preview'.$previewCount.'">'.$m[1].'</div></div>';
-			$previewCount++;
-			return $temp;
-		},
-		$cnt
-	);
+	// マークダウン時
+	if($markdown){
+		// コードショートカット
+		$cnt = preg_replace_callback(
+			array('/{{code}}|{{\/code}}/'),
+			function($m){
+				if($m[0] == '{{code}}'){
+					return '<div class="code"><pre><code>';
+				}
+				else if($m[0] == '{{/code}}'){
+					return '</code></pre></div>';
+				}
+			},
+			$cnt
+		);
+		// プレビューショートカット
+		$cnt = preg_replace_callback(
+			'/&lt;iframe[\sA-Za-z0-9&quot;="\'_\-\/\.]*/s',
+			function($m){
+				preg_match('/src=&quot;([0-9a-z_\-\/\.]*)/i',$m[0],$src);
+				$src = $src[1];
+				return '<iframe frameborder="0" src="'.$src.'"></iframe>';
+			},
+			$cnt
+		);
+	}else{
+		$cnt = preg_replace_callback(
+			// array('/{{code}}\n.+\n{{\/code}}/'),
+			array('/{{code}}(.)*/'),
+			function($m){
+				echo '<pre>';
+				var_dump(htmlspecialchars($m[1]));
+				echo '</pre>';
+				//if($m[0] == '{{code}}'){
+				//	return '<div class="code"><pre><code>';
+				//}
+				//else if($m[0] == '{{/code}}'){
+				//	return '</code></pre></div>';
+				//}
+				return '';
+			},
+			$cnt
+		);
+	}
 	// -------------------------------------------------------------------------
 	$cnt = preg_replace_callback('/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/',function($m){
 		$type       = $m[1];
