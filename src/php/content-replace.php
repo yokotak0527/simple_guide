@@ -2,35 +2,57 @@
 
 namespace contents;
 
-function replace($_cnt,$config,&$preview_cnts){
+function replace($_cnt,$config){
 	$contents_line = $config['contents_line'];
 	$markdown      = $config['markdown'];
 	$cnt           = $_cnt;
+	$previewCount  = 0;
+	$temp          = null;
 	$cnt           = preg_replace(
 		array(
 			'/-{'.$contents_line.'}\n?/',
 			'/{{set}}/',
-			'/{{\/set}}/',
-			'/{{code}}/',
-			'/{{\/code}}/'
+			'/{{\/set}}/'
 		),
 		array(
 			'',
 			$markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">',
-			'</div>',
-			'<div class="code"><pre><code>',
-			'</code></pre></div>'
+			'</div>'
 		),
 		$cnt
 	);
 	// -------------------------------------------------------------------------
-	$cnt = preg_replace_callback('/{{preview}}(.*){{\/preview}}/s',function($m){
-		global $preview_cnts;
-		$i = count($preview_cnts);
-		$preview_cnts[$i] = $m[1];
-		return '<div class="preview"><div id="preview'.$i.'"></div></div>';
-	},$cnt);
-	$preview_cnts = json_encode($preview_cnts);
+	// コードタグの置換
+	$cnt = preg_replace_callback(
+		array('/{{code}}([^({{\/code}}).]*){{\/code}}/s'),
+		function($m){
+			var_dump("adsfsdd");
+			$temp = '<div class="code"><pre><code>'.$m[1].'</code></pre></div>';
+			return $temp;
+		},
+		$cnt
+	);
+	//$cnt = preg_replace_callback(
+	//	array('/{{code}}([^({{\/code}}).]*){{\/code}}/s'),
+	//	function($m){
+	//		var_dump("adsfsdd");
+	//		$temp = '<div class="code"><pre><code>'.$m[1].'</code></pre></div>';
+	//		return $temp;
+	//	},
+	//	$cnt
+	//);
+	// -------------------------------------------------------------------------
+	// プレビュータグの置換
+	$cnt = preg_replace_callback(
+		array('/{{preview}}([^({{\/preview}}).]*){{\/preview}}/s'),
+		function($m){
+			global $previewCount;
+			$temp = '<div class="preview"><div id="preview'.$previewCount.'">'.$m[1].'</div></div>';
+			$previewCount++;
+			return $temp;
+		},
+		$cnt
+	);
 	// -------------------------------------------------------------------------
 	$cnt = preg_replace_callback('/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/',function($m){
 		$type       = $m[1];
