@@ -59,6 +59,7 @@ function replace($_cnt,$config){
 			},
 			$cnt
 		);
+		$cnt = preg_replace('/\/\/tbr[\|\s]*/s','<br>',$cnt);
 	}
 	// -------------------------------------------------------------------------
 	$videRegExp = $markdown ? '/{{video\s(youtube|vimeo|niconico)=(&quot;|'.preg_quote("'").')(.*)(&quot;|'.preg_quote("'").')}}/' : '/{{video\s(youtube|vimeo|niconico)=(\"|\')(\S*)(\"|\')}}/';
