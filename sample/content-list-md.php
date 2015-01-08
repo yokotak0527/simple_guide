@@ -9,57 +9,69 @@
 --------------------------------------------------------------------------------
 {{set}}
 
-# content list
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+# 大見出し
+文章：黙れすぎおまえはまわりにこわいまして一生けん命のだいのゴーシュらをまげ第二金げのきょろきょろをしてやっましまし。弓はたくさんなってしまうき。いっしょは万弾い嵐のようをはくすながらいん。ばかは扉子たりおまえからはじめていた。
 
-## content list
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+## 中見出し
+文章：これはおれへ野鼠をふみてなんて呆れゴーシュは悪いへんたてよ。」![](http://placehold.it/800x300)みんなは丈夫そうをしがなあセロマッチへ知らとます顔のボックスから待って指さしやたっのでいで。汗もなるて扉が飛び立ちうた。何はちょろちょろ大も赤くんましてぱちんととめておじぎをはまた永くもんなくまし。「一生けん命のたくさんの銀を。
 
-### content list
+### 小見出し
+文章：ちがいましたてまる窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-
-- - - - - - - - - - - - - -
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-
-vitae dicta sunt explicabo. Nemo enim ipsamvoluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est
+文章(段落)：ちがいましたてまる窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
 
 - - - - - - - - - - - - - -
 
-Sed ut perspiciatis unde *omnis iste natus error sit voluptatem accusantium doloremque* laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. [Nemo enim ipsam voluptatem quia voluptas](http://example.com/) sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+## Large Header
 
-- - - - - - - - - - - - - -
+text：窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
+
+* list：しばらくかとけちはてもうちがいましたてまる
+* list：しばらくかとけちはてもうちがいましたてまる
+* list：しばらくかとけちはてもうちがいましたてまる
+
+text：窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
+
+1. list：eaque ipsa quae ab illo inventore veritatis et quasi architecto
+2. list：eaque ipsa quae ab illo inventore veritatis et quasi architecto
+3. list：eaque ipsa quae ab illo inventore veritatis et quasi architecto
+
+text：窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
 
 ☆
-: Setunde omnis iste natus error sit voluptatem accusantium
+: data list：Setunde omnis iste natus error sit voluptatem accusantium
 
 ■
-: unde omnis iste natus error sit voluptatem accusantium
+: data list：unde omnis iste natus error sit voluptatem accusantium
 
 01
-: unde omnis iste natus error sit voluptatem accusantium
+: data list：unde omnis iste natus error sit voluptatem accusantium
 
 02
-: unde omnis iste natus error sit voluptatem accusantium
+: data list：unde omnis iste natus error sit voluptatem accusantium
 
-- - - - - - - - - - - - - -
+text：窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
 
-| thead th | thead th | thead th |
-|:---------|---------:|:--------:|
-| tbody td | tbody td | tbody td |
+## Middle Header
 
-- - - - - - - - - - - - - -
+text：窓がへんじてまたごうごうとゴーシュが日来たなら。しばらくかとけちはてもうちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
 
-* eaque ipsa quae ab illo inventore veritatis et quasi architecto
-* eaque ipsa quae ab illo inventore veritatis et quasi architecto
-* eaque ipsa quae ab illo inventore veritatis et quasi architecto
+| thead th | thead th | thead th       |
+|:---------|---------:|:--------------:|
+| tbody td | tbody td | tbody td //tbr |
+                        tbody td       |
+| tbody td | tbody td | tbody td       |
 
-- - - - - - - - - - - - - -
+### Little Header
 
-1. eaque ipsa quae ab illo inventore veritatis et quasi architecto
-2. eaque ipsa quae ab illo inventore veritatis et quasi architecto
-3. eaque ipsa quae ab illo inventore veritatis et quasi architecto
+窓がへんじてまたごうごうとゴーシュが**日来たなら**。[しばらくかとけちはても](http://example.com/)うちがいましたてまるくことをはこんどはかぶれの棒たまし。野ねずみはどこを近くだろ鳥のなかあなたへ上げだらようとわ矢口からゆうべがすわり込んとこれかなりんに来るてしまいだまし。
+
+{{preview}}
+<iframe src="style_template/sample1.html"></iframe>
+{{/preview}}
+{{code}}
+<input type="button" class="button" value="sample">
+{{/code}}
 
 - - - - - - - - - - - - - -
 
@@ -71,6 +83,13 @@ Sed ut perspiciatis unde *omnis iste natus error sit voluptatem accusantium dolo
 
 - - - - - - - - - - - - - -
 
+# content list
+## content list
+
+asdfasfdasdf  
+asdfa asdfasdfads
+
+# content list
 {{video youtube="//www.youtube.com/embed/_PjBHyfo_T0"}}
 
 - - - - - - - - - - - - - -

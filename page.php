@@ -8,6 +8,16 @@
 --------------------------------------------------------------------------------
 {{set}}
 
+| thead th | thead th | thead th |
+|:---------|---------:|:--------:|
+| tbody td | tbody td | tbody td |
+| tbody td | tbody td | tbody td |
+
+unde omnis iste natus error sit voluptatem accusantium  
+unde omnis iste natus error sit voluptatem accusantium
+
+- - - - - - - - - - - - - -
+
 unde omnis iste natus error sit voluptatem accusantium  
 unde omnis iste natus error sit voluptatem accusantium
 
@@ -29,6 +39,12 @@ unde omnis iste natus error sit voluptatem accusantium
 <input type="button" class="button" value="sample">
 {{/code}}
 
+{{/set}}
+
+{{set}}
+ごへ  
+asfasd  
+あえおいあせふぁせふぁせ
 {{/set}}
 --------------------------------------------------------------------------------
 EOD;

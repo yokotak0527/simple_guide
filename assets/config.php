@@ -10,7 +10,7 @@
 	$root_path        = isset($root_path)        ? $root_path        : './';
 	$markdown         = isset($markdown)         ? $markdown         : true;
 	$contents_line    = isset($contents_line)    ? $contents_line    : 80;
-	$theme            = isset($theme)            ? $theme            : 'default_theme';
+	$theme            = isset($theme)            ? $theme            : 'default_theme2';
 	// =========================================================================
 	// developer
 	// =========================================================================
