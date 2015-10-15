@@ -1,0 +1,250 @@
+@import "helper-extends"
+@import "helper-mixins"
+@import "compass"
+@import "_variable"
+
+@mixin under-inline-margin($tag,$type)
+	> #{$tag}:first-child
+		@if $type == 'inline'
+			margin-top : -0.3em
+	> h1 + #{$tag},
+	> h2 + #{$tag},
+	> h3 + #{$tag}
+		@if $type == 'inline'
+			margin-top : 0.5em
+		@else if $type == 'block'
+			margin-top : 0.75em
+	> p  + #{$tag},
+	> ol + #{$tag},
+	> ul + #{$tag},
+	> dl + #{$tag}
+		@if $type == 'inline'
+			margin-top : 0.3em
+		@else if $type == 'block'
+			margin-top : 0.7em
+	> div   + #{$tag},
+	> table + #{$tag}
+		@if $type == 'inline'
+			margin-top : 0.75em
+		@else if $type == 'block'
+			margin-top : 1.15em
+	> hr + #{$tag}
+		@if $type == 'inline'
+			margin-top : 2.7em
+		@else if $type == 'block'
+			margin-top : 3.5em
+
+.guide-style
+	background : #FFF
+	padding    : 50px
+	%em-style
+		font-style  : normal
+		font-weight : bold
+	%link-style
+		color : #0044CC
+	%img-style
+		display   : block
+		max-width : 100%
+		padding   : 0.5em 0 0.6em 0
+	// -------------------------------------------------------------------------
+	> h1
+		display     : block
+		font-size   : 38px
+		line-height : 1.18
+		font-weight : bold
+		a
+			@extend %link-style
+		em
+			@extend %em-style
+	> h1:first-child
+		margin-top : -0.12em
+	> p  + h1,
+	> ul + h1,
+	> ol + h1,
+	> dl + h1
+		margin-top : 0.93em
+	> div   + h1,
+	> table + h1,
+	> hr    + h1
+		margin-top : 1.1em
+
+	// -------------------------------------------------------------------------
+	> h2
+		display     : block
+		font-size   : 26px
+		line-height : 1.25
+		font-weight : bold
+		a
+			@extend %link-style
+		em
+			@extend %em-style
+	> h2:first-child
+		margin-top : -0.2em
+	> p  + h2,
+	> ul + h2,
+	> ol + h2,
+	> dl + h2
+		margin-top : 1.4em
+	> div   + h2,
+	> table + h2,
+	> hr    + h2
+		margin-top : 1.6em
+	// -------------------------------------------------------------------------
+	> h3
+		font-weight : bold
+		font-size   : 18px
+		line-height : 1.35
+		a
+			@extend %link-style
+		em
+			@extend %em-style
+	> h3:first-child
+		margin-top : -0.2em
+	> p  + h3,
+	> ul + h3,
+	> ol + h3,
+	> dl + h3
+		margin-top : 2em
+	> div   + h3,
+	> table + h3,
+	> hr    + h3
+		margin-top : 2.35em
+	// -------------------------------------------------------------------------
+	> p
+		display     : block
+		line-height : $line-height
+		font-size   : $text-font-size
+		a
+			@extend %link-style
+		em
+			@extend %em-style
+		img
+			@extend %img-style
+	@include under-inline-margin('p','inline')
+	> ul + p,
+	> ol + p,
+	> dl + p
+		margin-top : 0.4em
+	// -------------------------------------------------------------------------
+	> ul
+		display     : block
+		line-height : $line-height
+		font-size   : $text-font-size
+		li
+			list-style  : disc inside
+			margin-left : 0.27em
+			a
+				@extend %link-style
+			em
+				@extend %em-style
+			img
+				@extend %img-style
+	@include under-inline-margin('ul','inline')
+	// -------------------------------------------------------------------------
+	> ol
+		line-height : $line-height
+		font-size   : $text-font-size
+		li
+			list-style : decimal-leading-zero inside
+			a
+				@extend %link-style
+			em
+				@extend %em-style
+			img
+				@extend %img-style
+	@include under-inline-margin('ol','inline')
+	// -------------------------------------------------------------------------
+	> dl
+		line-height : $line-height
+		font-size   : $text-font-size
+		@include clearfix
+		a
+			@extend %link-style
+		em
+			@extend %em-style
+		img
+			@extend %img-style
+		dt
+			float : left
+			clear : both
+		dd
+			padding-left : 1.8em
+	@include under-inline-margin('dl','inline')
+	// -------------------------------------------------------------------------
+	> hr
+		display    : block
+		height     : 4px
+		background : #DDD
+		border     : none
+		padding    : 0
+		margin     : 0
+		font-size  : 15px
+	p  + hr,
+	ul + hr,
+	ol + hr,
+	dl + hr
+		margin-top : 2.6em
+	div   + hr,
+	table + hr
+		margin-top : 3em
+	// -------------------------------------------------------------------------
+	> table
+		th,td
+			padding      : 0.5em 1em 0.35em 1em
+			text-align   : left
+			border-right : 2px solid #FFF
+			line-height  : $line-height
+			font-size    : $text-font-size
+			a
+				@extend %link-style
+			em
+				@extend %em-style
+			img
+				@extend %img-style
+		thead
+			th,td
+				background   : #CACACA
+				font-weight  : normal
+		tbody
+			tr:nth-child(even)
+				th,td
+					background : #EEE
+	@include under-inline-margin('table','block')
+	// -------------------------------------------------------------------------
+	@include under-inline-margin('div','block')
+	// -------------------------------------------------------------------------
+	> .code
+		.hljs
+			line-height : 1.4
+			padding     : 1em
+			overflow-x  : scroll
+			background  : #333
+			font-family : 'ricty',monospace
+	// -------------------------------------------------------------------------
+	> .preview
+		> div
+			border     : 1px solid #DDD
+			width      : 100%
+			padding    : 0.8em
+			background : image-url('preview_bg.gif')
+			@include box-sizing(border-box)
+		iframe
+			width : 100%
+	// -------------------------------------------------------------------------
+	> .video
+		> div
+			position : relative
+			height   : 0
+			padding  : 30px 0 56.25%
+			overflow : hidden
+		> div > iframe,
+		> div > object,
+		> div > embed
+			position : absolute
+			top      : 0
+			left     : 0
+			width    : 100%
+			height   : 100%
+
+.guide-style + .guide-style
+	margin-top : 40px

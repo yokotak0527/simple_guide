@@ -1,5 +1,5 @@
 <?php
-	$lang             = isset($lang)             ? $lang             : 'en';
+	$lang             = isset($lang)             ? $lang             : 'ja';
 	$charset          = isset($charset)          ? $charset          : 'UTF-8';
 	$guide_title      = isset($guide_title)      ? $guide_title      : 'SIMPLE GUIDE';
 	$guide_title_html = isset($guide_title_html) ? $guide_title_html : 'SIMPLE<br>GUIDE';
@@ -10,7 +10,7 @@
 	$root_path        = isset($root_path)        ? $root_path        : './';
 	$markdown         = isset($markdown)         ? $markdown         : true;
 	$contents_line    = isset($contents_line)    ? $contents_line    : 80;
-	$theme            = isset($theme)            ? $theme            : 'default_theme2';
+	$theme            = isset($theme)            ? $theme            : 'default_theme3';
 	// =========================================================================
 	// developer
 	// =========================================================================
