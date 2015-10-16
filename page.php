@@ -4,7 +4,7 @@
 	// -------------------------------------------------------------------------
 	require_once $root_path.'assets/config.php';
 	require_once $root_path.'assets/header.php';
-	$contents = <<<EOD
+	$contents = <<<'EOD'
 --------------------------------------------------------------------------------
 {{set}}
 
@@ -13,12 +13,12 @@
 | tbody td | tbody td | tbody td |
 | tbody td | tbody td | tbody td |
 
-unde omnis iste natus error sit voluptatem accusantium  
+unde omnis iste natus error sit voluptatem accusantium
 unde omnis iste natus error sit voluptatem accusantium
 
 - - - - - - - - - - - - - -
 
-unde omnis iste natus error sit voluptatem accusantium  
+unde omnis iste natus error sit voluptatem accusantium
 unde omnis iste natus error sit voluptatem accusantium
 
 - - - - - - - - - - - - - -
@@ -30,7 +30,7 @@ unde omnis iste natus error sit voluptatem accusantium
 - - - - - - - - - - - - - -
 
 ## おけ
-よこたけんじ  
+よこたけんじ
 けんじ
 {{preview}}
 <iframe src="style_template/sample1.html"></iframe>
@@ -42,8 +42,8 @@ unde omnis iste natus error sit voluptatem accusantium
 {{/set}}
 
 {{set}}
-ごへ  
-asfasd  
+ごへ
+asfasd
 あえおいあせふぁせふぁせ
 {{/set}}
 --------------------------------------------------------------------------------

@@ -16,12 +16,13 @@ function replace($_cnt,$config){
 	// ショートタグの置換
 	$cnt = preg_replace_callback(
 		array(
-			'/{{set}}|{{\/set}}/',
-			'/{{preview}}|{{\/preview}}/',
-			'/{{code}}|{{\/code}}/'
+			'/{{set}}|{{\/set}}/i',
+			'/{{preview}}|{{\/preview}}/i',
+			'/{{code\s?(lang=)?[a-z]*}}|{{\/code}}/i'
 		),
 		function($m){
 			global $markdown;
+			$match = false;
 			// set
 			if($m[0] == '{{set}}'){
 				return $markdown ? '<div class="guide-style" markdown="1">' : '<div class="guide-style">';
@@ -37,8 +38,14 @@ function replace($_cnt,$config){
 				return '</div></div>';
 			}
 			// コード
-			if($m[0] == '{{code}}'){
-				return '<div class="code"><pre><code>';
+			$match = false;
+			preg_match('/^{{code\s?(lang=)?([a-z]*)/i',$m[0],$match);
+			if(isset($match[0])){
+				if(isset($match[1]) && isset($match[2]) && $match[1] == 'lang='){
+					return '<div class="code"><pre><code class="'.$match[2].'">';
+				}else{
+					return '<div class="code"><pre><code>';
+				}
 			}
 			else if($m[0] == '{{/code}}'){
 				return '</code></pre></div>';
@@ -69,13 +76,13 @@ function replace($_cnt,$config){
 		$video_cnt  = '';
 		$video_cnt .= '<div class="video"><div>';
 		switch($type){
-			case 'youtube' : 
+			case 'youtube' :
 				$video_cnt .= '<iframe src="'.$url.'" allowfullscreen></iframe>';
 			break;
-			case 'vimeo' : 
+			case 'vimeo' :
 				$video_cnt .= '<iframe src="'.$url.'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 			break;
-			case 'niconico' : 
+			case 'niconico' :
 				preg_match('/.*\/(sm.*)(\?.*)/',$url,$id);
 				$id = $id[1];
 				$video_cnt .= '<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/'.$id.'"></script><noscript><a href="http://www.nicovideo.jp/watch/'.$id.'"></a></noscript>';

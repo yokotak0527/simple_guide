@@ -1,9 +1,10 @@
 .guide-style {
   background: #FFF;
   padding: 50px; }
-  .guide-style > h1 em, .guide-style > h2 em, .guide-style > h3 em, .guide-style > p em, .guide-style > ul li em, .guide-style > ol li em, .guide-style > dl em, .guide-style > table th em, .guide-style > table td em {
+  .guide-style > h1 em, .guide-style > h2 em, .guide-style > h3 em, .guide-style > p em, .guide-style > p strong, .guide-style > ul li em, .guide-style > ul li strong, .guide-style > ol li em, .guide-style > ol li strong, .guide-style > dl em, .guide-style > dl strong, .guide-style > table th em, .guide-style > table td em, .guide-style > table th strong, .guide-style > table td strong {
     font-style: normal;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #e80575; }
   .guide-style > h1 a, .guide-style > h2 a, .guide-style > h3 a, .guide-style > p a, .guide-style > ul li a, .guide-style > ol li a, .guide-style > dl a, .guide-style > table th a, .guide-style > table td a {
     color: #0044CC; }
   .guide-style > p img, .guide-style > ul li img, .guide-style > ol li img, .guide-style > dl img, .guide-style > table th img, .guide-style > table td img {
@@ -63,7 +64,8 @@
     font-size: 15px; }
   .guide-style > p:first-child {
     margin-top: -0.3em; }
-  .guide-style > h1 + p,
+  .guide-style > h1 + p {
+    margin-top: 0.4em; }
   .guide-style > h2 + p,
   .guide-style > h3 + p {
     margin-top: 0.5em; }
@@ -87,10 +89,12 @@
     font-size: 15px; }
     .guide-style > ul li {
       list-style: disc inside;
-      margin-left: 0.27em; }
+      margin-left: 1.17em;
+      text-indent: -0.9em; }
   .guide-style > ul:first-child {
     margin-top: -0.3em; }
-  .guide-style > h1 + ul,
+  .guide-style > h1 + ul {
+    margin-top: 0.4em; }
   .guide-style > h2 + ul,
   .guide-style > h3 + ul {
     margin-top: 0.5em; }
@@ -111,7 +115,8 @@
       list-style: decimal-leading-zero inside; }
   .guide-style > ol:first-child {
     margin-top: -0.3em; }
-  .guide-style > h1 + ol,
+  .guide-style > h1 + ol {
+    margin-top: 0.4em; }
   .guide-style > h2 + ol,
   .guide-style > h3 + ol {
     margin-top: 0.5em; }
@@ -137,7 +142,8 @@
       padding-left: 1.8em; }
   .guide-style > dl:first-child {
     margin-top: -0.3em; }
-  .guide-style > h1 + dl,
+  .guide-style > h1 + dl {
+    margin-top: 0.4em; }
   .guide-style > h2 + dl,
   .guide-style > h3 + dl {
     margin-top: 0.5em; }
@@ -178,7 +184,8 @@
     font-weight: normal; }
   .guide-style > table tbody tr:nth-child(even) th, .guide-style > table tbody tr:nth-child(even) td {
     background: #EEE; }
-  .guide-style > h1 + table,
+  .guide-style > h1 + table {
+    margin-top: 0.65em; }
   .guide-style > h2 + table,
   .guide-style > h3 + table {
     margin-top: 0.75em; }
@@ -189,10 +196,11 @@
     margin-top: 0.7em; }
   .guide-style > div + table,
   .guide-style > table + table {
-    margin-top: 1.15em; }
+    margin-top: 1.25em; }
   .guide-style > hr + table {
     margin-top: 3.5em; }
-  .guide-style > h1 + div,
+  .guide-style > h1 + div {
+    margin-top: 0.65em; }
   .guide-style > h2 + div,
   .guide-style > h3 + div {
     margin-top: 0.75em; }
@@ -203,7 +211,7 @@
     margin-top: 0.7em; }
   .guide-style > div + div,
   .guide-style > table + div {
-    margin-top: 1.15em; }
+    margin-top: 1.25em; }
   .guide-style > hr + div {
     margin-top: 3.5em; }
   .guide-style > .code .hljs {

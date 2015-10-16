@@ -7,7 +7,11 @@
 	> #{$tag}:first-child
 		@if $type == 'inline'
 			margin-top : -0.3em
-	> h1 + #{$tag},
+	> h1 + #{$tag}
+		@if $type == 'inline'
+			margin-top : 0.4em
+		@else if $type == 'block'
+			margin-top : 0.65em
 	> h2 + #{$tag},
 	> h3 + #{$tag}
 		@if $type == 'inline'
@@ -22,12 +26,16 @@
 			margin-top : 0.3em
 		@else if $type == 'block'
 			margin-top : 0.7em
+	// > p  + #{$tag}
+		// @if $type == 'inline'
+			// @if $tag != 'p'
+				// margin-top : 0.2em
 	> div   + #{$tag},
 	> table + #{$tag}
 		@if $type == 'inline'
 			margin-top : 0.75em
 		@else if $type == 'block'
-			margin-top : 1.15em
+			margin-top : 1.25em
 	> hr + #{$tag}
 		@if $type == 'inline'
 			margin-top : 2.7em
@@ -40,6 +48,7 @@
 	%em-style
 		font-style  : normal
 		font-weight : bold
+		color       : #e80575
 	%link-style
 		color : #0044CC
 	%img-style
@@ -118,6 +127,8 @@
 			@extend %link-style
 		em
 			@extend %em-style
+		strong
+			@extend %em-style
 		img
 			@extend %img-style
 	@include under-inline-margin('p','inline')
@@ -131,11 +142,14 @@
 		line-height : $line-height
 		font-size   : $text-font-size
 		li
-			list-style  : disc inside
-			margin-left : 0.27em
+			list-style   : disc inside
+			margin-left  : 1.17em
+			text-indent  : -0.9em
 			a
 				@extend %link-style
 			em
+				@extend %em-style
+			strong
 				@extend %em-style
 			img
 				@extend %img-style
@@ -150,6 +164,8 @@
 				@extend %link-style
 			em
 				@extend %em-style
+			strong
+				@extend %em-style
 			img
 				@extend %img-style
 	@include under-inline-margin('ol','inline')
@@ -161,6 +177,8 @@
 		a
 			@extend %link-style
 		em
+			@extend %em-style
+		strong
 			@extend %em-style
 		img
 			@extend %img-style
@@ -198,6 +216,8 @@
 			a
 				@extend %link-style
 			em
+				@extend %em-style
+			strong
 				@extend %em-style
 			img
 				@extend %img-style
